@@ -1,0 +1,86 @@
+/* Estilos Gerais */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--background);
+    color: var(--branco);
+}
+
+/* Variaveis CSS */
+
+:root{
+    --branco: #fff;
+    --preto: #000;
+    --background: rgba(31,87,104,255);
+    --fontetitulo: 'Sego UI', sans-serif;
+}
+
+
+
+
+/* Estilo do h1 */
+
+#titulo{
+    font: normal bold 55px var(--fontetitulo);
+    text-align: center;
+    margin: 30px 0 110px;
+}
+
+/* Estilo do main */
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Estilo das folhas */
+
+.folha{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+#folha1{
+    background-color:green;
+}
+#folha2{
+    background-color: yellow;
+}
+#folha3{
+    background-color: red;
+}
+
+/* Estlo do Sapo */
+
+.sapo{
+    position: absolute;
+    animation: pulsar 1.5s infinite;
+}
+
+.img_sapo{
+    margin: 0 35px;
+}
+
+
+@keyframes pulsar {
+    /* Escala inicial */
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+

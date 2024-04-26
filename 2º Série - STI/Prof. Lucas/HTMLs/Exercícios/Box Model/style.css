@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+}
+div{
+    width: 150px;
+    height: 150px;
+    background-color: blueviolet;
+    border: 1px solid black;
+    text-align: center;
+    margin: auto 32px;
+}
+h1{
+    border: 2px solid ;
+    background-color: chartreuse;
+}
+p{
+    border: 2px solid;
+    background-color: darkkhaki;
+}
+main{
+    display: flex;
+    border: 1px solid black;
+    padding: 20px;
+    height: 300px;
+    margin: auto;
+}
+
+.caixa01{
+    padding: 10px;
+}

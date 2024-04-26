@@ -1,0 +1,17 @@
+p{
+    font: normal bolder 2em cursive;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+}
+body{
+    background-color: rgba(197, 197, 197, 0.249);
+}
+body{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}

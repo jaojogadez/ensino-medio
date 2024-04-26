@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 03</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <!--1 MANIPULANDO VARIAVEIS -->
+
+    <!-- SIMPLES 
+    <script>
+        let n1 = window.prompt('Digite um número: ')
+        let n2 = window.prompt('Digite mais um número: ')
+        let t = n1 + n2
+        window.alert('A soma dos valores é: ' + t)
+    </script>
+     -->
+
+     <!--2 CONVERSÃO DE DADOS (Casting)
+
+     <script>
+        let n1 = window.Number.parseInt(prompt('Digite um número: '))
+        let n2 = window.Number.parseInt(prompt('Digite mais um número: '))
+        let t = n1 + n2
+        window.alert('A soma dos valores é: ' + t)
+     </script>
+      -->
+
+      <!--3 - CONCATENAÇÃO 
+      <script>
+        let n1 = window.Number.parseInt(prompt('Digite um número: '))
+        let n2 = window.Number.parseInt(prompt('Digite mais um número: '))
+        let t = n1 + n2
+        window.alert('A soma entre ' +n1+ ' e ' +n2+ ' é: ' + t)
+     </script>
+     -->
+
+     <!--4 - PLACEHOLDER 
+      <script>
+        let n1 = window.Number.parseInt(prompt('Digite um número: '))
+        let n2 = window.Number.parseInt(prompt('Digite mais um número: '))
+        let t = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é: ${t}`)
+     </script>
+     
+
+      <script>
+        let n1 = window.Number.parseFloat(prompt('Digite a primeira nota: '))
+        let n2 = window.Number.parseFloat(prompt('Digite a segunda nota: '))
+        let n3 = window.Number.parseFloat(prompt('Digite a terceira nota: '))
+        let n4 = window.Number.parseFloat(prompt('Digite a quarta nota: '))
+
+        let media = (n1 + n2 + n3 + n4)/4
+
+        if ( media > 0 && media >= 6 && media <= 10){
+            window.alert(`A média das notas ${n1}, ${n2}, ${n3}, ${n4} é: ${media}`)
+            window.alert('Aluno Aprovado!')
+        }
+        else if (media > 0 && media >= 4  && media < 6){
+            window.alert(`A média das notas ${n1}, ${n2}, ${n3}, ${n4} é: ${media}`)
+            window.alert('Aluno em Recuperação :(')
+        }
+        else if (media > 0 && media < 4){
+            window.alert(`A média das notas ${n1}, ${n2}, ${n3}, ${n4} é: ${media}`)
+            window.alert('Aluno Reprovado :(')
+        }
+        else{
+            window.alert('As notas não estão coerentes')
+        }
+     </script>
+ -->
+    <script>
+        var altura = window.Number.parseFloat(prompt('Qual a sua altura? '))
+        var peso = window.Number.parseFloat(prompt('Qual o seu peso? '))
+        var imc = peso/(altura*altura)
+        window.alert(`Seu IMC é ${imc}`)
+        if( imc < 18.5){
+            window.alert('Abaixo do peso')
+        }
+        else if( imc > 18.5 && imc < 25){
+            window.alert('Peso Saúdavel')
+        }
+        else if(imc >= 25 && imc < 30){
+            window.alert('Sobrepeso')
+        }
+        else if( imc > 30 ){
+            window.alert('Obesidade')
+        }
+    </script>
+
+
+
+
+</body>
+</html>
