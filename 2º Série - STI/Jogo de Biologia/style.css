@@ -47,5 +47,18 @@ main button:hover{
 
 
 .question{
-    width: 650px;
+    width: 550px;
+}
+
+form{
+    display: none;
+}
+.options{
+    padding: 10px;
+}
+.options label{
+    margin-left: 10px;
+}
+.options:hover{
+    background-color: rgba(226, 226, 226, 0.499);
 }

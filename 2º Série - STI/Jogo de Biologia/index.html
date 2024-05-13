@@ -10,7 +10,25 @@
     <main id="card" class="normal">
         <h1>Jogo de Biologia</h1>
         <h2>Doença de Chagas</h2>
-        <button onclick="iniciar()">Começar</button>
+        <form>
+            <div class="options" onclick="clicked()">
+                <input type="radio" id="a" name="alternativa" value="a">
+                <label for="a">A) Alternativa A</label><br>
+            </div>
+            <div class="options" onclick="clicked()">
+                <input type="radio" id="b" name="alternativa" value="b">
+                <label for="b">B) Alternativa B</label><br>
+            </div>
+            <div class="options" onclick="clicked()">
+                <input type="radio" id="c" name="alternativa" value="c">
+                <label for="c">C) Alternativa C</label><br>
+            </div>
+            <div class="options" onclick="clicked()">
+                <input type="radio" id="d" name="alternativa" value="d">
+                <label for="d">D) Alternativa D</label><br>
+            </div>
+        </form>
+        <button onclick="iniciar()" id="button">Começar</button>
     </main>
     <script src="script.js"></script>
 </body>
