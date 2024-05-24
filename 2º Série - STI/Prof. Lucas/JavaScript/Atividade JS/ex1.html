@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex1</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            margin: 5px 0;
+            width: 50px;
+            display: inline-block;
+        }
+        label{
+            padding: 0 0 0 10px;
+        }
+        #media{
+            margin: 15px 0;
+            font-size: 1em;
+            box-shadow: -1px -1px 10px rgba(0, 0, 0, 0.315);
+            padding: 15px;
+            border-radius: 15px;
+            display: none;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1) Input de 4 notas e cálculo de média de um aluno. Ao final, mostrar se o mesmo está aprovado, de recuperação ou reprovado. -->
+    <h1>Calcule a Média do Aluno</h1>
+    <main>
+        <label for="number">Nota 1</label>
+        <input type="number" id="n1">
+        <label for="number">Nota 2</label>
+        <input type="number" id="n2">
+        <label for="number">Nota 3</label>
+        <input type="number" id="n3">
+        <label for="number">Nota 4</label>
+        <input type="number" id="n4">
+    </main>    
+    <input type="submit" value="Enviar" onclick="media()">
+    <div id="media">
+        <div id="cond"></div>
+    </div>
+    <script>
+        var n1 = window.document.getElementById('n1')
+        var n2 = window.document.getElementById('n2')
+        var n3 = window.document.getElementById('n3')
+        var n4 = window.document.getElementById('n4')
+        var res = window.document.getElementById('media')
+        var con = window.document.getElementById('cond')
+        function media(){
+            var nota1 = Number(n1.value)
+            var nota2 = Number(n2.value)
+            var nota3 = Number(n3.value)
+            var nota4 = Number(n4.value)
+            if(nota1 <= 0 || nota2 <= 0 || nota3 <= 0 || nota4 <= 0 || nota1 > 10 || nota2 > 10 || nota3 > 10 || nota4 > 10){
+                window.alert('Insira notas válidas')
+            }
+            else{
+                var media = (nota1 + nota2 + nota3 + nota4)/4
+                res.style.display = "block";
+                if(media > 6){
+                    res.innerHTML = `A média do aluno é ${media}` + ' <strong>Aluno Aprovado</strong>'
+                }
+                else{
+                    res.innerHTML = `A média do aluno é ${media}` + ' <strong>Aluno Reprovado</strong>'
+                }
+            }        
+        }
+    </script>
+</body>
+</html>
