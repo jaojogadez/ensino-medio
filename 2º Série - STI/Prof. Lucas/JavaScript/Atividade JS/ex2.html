@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input{
+            margin: 5px 0;
+            width: 160px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 2) Input de dois valores: realizar as operações aritméticas básicas e mostrar o resultado para o usuário. -->
+    <main>
+        <h1>Calculadora Básica</h1>
+        <label for="number">Insira o primeiro valor:</label>
+        <input type="number" id="n1">
+        <label for="number">Insira o segundo valor:</label>
+        <input type="number" id="n2">
+        <input type="submit" value="Enviar" onclick="calcular()">
+        <div id="resultado"></div>
+    </main>
+    <script>
+        var n1 = document.getElementById('n1')
+        var n2 = document.getElementById('n2')
+        var div = document.getElementById('resultado')
+        function calcular (){
+            var v1 = Number(n1.value)
+            var v2 = Number(n2.value)
+            var soma = v1 + v2
+            var sub = v1 - v2
+            var mult = v1 * v2
+            var dividir = v1 / v2
+            div.innerHTML = `Valores Somados: <strong>${soma}</strong><br>` + `Valores Subtraidos: <strong>${sub}</strong><br>` + `Valores Multiplicados: <strong>${mult}</strong><br>` + `Valores Dividos: <strong>${dividir}</strong>` 
+        }
+    </script>
+</body>
+</html>
