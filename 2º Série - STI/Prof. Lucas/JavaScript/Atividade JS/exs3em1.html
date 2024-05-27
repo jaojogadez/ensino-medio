@@ -18,30 +18,44 @@
             justify-content: center;
             flex-direction: column;
         }
-        section{
+        main{
+            padding: 25px;
+        }
+        section.inputs{
             display: flex;
             flex-direction: column;
+        }
+        .button{
+            padding: 10px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            margin: 15px 0;
+            background-color: #555;
+            color: white;
         }
     </style>
 </head>
 <body>
     <h1>Exercícios de JavaScript</h1>
     <main>
-        <!-- 1) Input de 4 notas e cálculo de média de um aluno. Ao final, mostrar se o mesmo está aprovado, de recuperação ou reprovado. -->
-        <h2>Calcule a Média do Aluno</h2>
-        <section>
-            <label for="number">Nota 1</label>
-            <input type="number" id="n1">
-            <label for="number">Nota 2</label>
-            <input type="number" id="n2">
-            <label for="number">Nota 3</label>
-            <input type="number" id="n3">
-            <label for="number">Nota 4</label>
-            <input type="number" id="n4">
-            <input type="submit" value="Enviar" onclick="media()" class="button">
-        </section>
-        <div id="media">
-            <div id="cond"></div>
+        <div class="exercicios">
+            <!-- 1) Input de 4 notas e cálculo de média de um aluno. Ao final, mostrar se o mesmo está aprovado, de recuperação ou reprovado. -->
+            <h2>Calcule a Média do Aluno</h2>
+            <section class="inputs">
+                <label for="number">Nota 1</label>
+                <input type="number" id="n1">
+                <label for="number">Nota 2</label>
+                <input type="number" id="n2">
+                <label for="number">Nota 3</label>
+                <input type="number" id="n3">
+                <label for="number">Nota 4</label>
+                <input type="number" id="n4">
+                <input type="submit" value="Enviar" onclick="media()" class="button">
+            </section>
+            <div id="media">
+                <div id="cond"></div>
+            </div>
         </div>
     </main>
     <script>
