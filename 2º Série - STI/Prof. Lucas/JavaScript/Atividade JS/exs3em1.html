@@ -66,8 +66,8 @@
 <body>
     <h1>Exercícios de JavaScript</h1>
     <main>
+        <!-- 1) Input de 4 notas e cálculo de média de um aluno. Ao final, mostrar se o mesmo está aprovado, de recuperação ou reprovado. -->
         <div class="exercicios">
-            <!-- 1) Input de 4 notas e cálculo de média de um aluno. Ao final, mostrar se o mesmo está aprovado, de recuperação ou reprovado. -->
             <h2>Calcule a Média do Aluno</h2>
             <section class="inputs">
                 <label for="number">Nota 1</label>
@@ -83,6 +83,18 @@
             <div id="media">
                 <div id="cond"></div>
             </div>
+        </div>
+        <!-- 2) Input de dois valores: realizar as operações aritméticas básicas e mostrar o resultado para o usuário. -->
+        <div class="exercicios">
+            <h2>Calculadora Simples</h2>
+            <section class="inputs">
+                <label for="number">Insira o valor 01</label>
+                <input type="number" id="num1">
+                <label for="number">Insira o valor 02</label>
+                <input type="number" id="num2">
+                <input type="submit" value="Calcular"  onclick="calc()" class="button">
+            </section>
+            <div id="result"></div>
         </div>
     </main>
     <script>
@@ -119,6 +131,21 @@
                 }
             }
         };
+
+        // script para o ex02
+
+        var num01 = document.getElementById('num01');
+        var num02 = document.getElementById('num02');
+        var div = document.getElementById('result');
+        function calc(){
+            var valor01 = Number(num01.value);
+            var valor02 = Number(num02.value);
+            var soma = valor01 + valor02
+            var subt = valor01 - valor02
+            var mult = valor01 * valor02
+            var divi = valor01 / valor02
+            div.innerHTML = `Soma: ${soma}<br>Subtração: ${subt}`
+        }
 
 
     </script>
