@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var clt = window.prompt('Você tem carteira de motorista? ')
+        var i = window.Number.parseInt(prompt('Qual sua idade? '))
+        if( clt == 'n' || clt == 'nn' || clt == 'nao' || clt == 'não' || clt == 'Não'){
+            window.alert('Vc não pode dirigir')
+        }  
+        else if(clt == 'sim' && i >= 18){
+            window.alert('Vc pode dirigir')
+        }
+        else{
+            window.alert('Vc é menor de idade, não pode dirigir')
+        }
+    </script>
+</body>
+</html>

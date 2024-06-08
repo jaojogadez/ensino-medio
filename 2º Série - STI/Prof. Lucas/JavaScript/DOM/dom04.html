@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom - Eventos </title>
+    <style>
+        div{
+            border-radius: 10px;
+            background-color: antiquewhite;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            width: 300px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area"  onmousedown="click_longo()" onmouseup="soltou_botao()">
+        INTERAJA!
+    </div>
+
+    <script>
+        var fazoL = window.document.getElementById('area')
+
+
+
+        fazoL.addEventListener('click', clicar)
+        fazoL.addEventListener('onmouseenter', entrar)
+        fazoL.addEventListener('onmouseleave', Sair)
+
+        function clicar(){
+            fazoL.innerText = 'Clicou'
+            fazoL.style.background = 'yellow'
+        }
+
+        function entrar(){
+            fazoL.innerText = 'Clicou'
+            fazoL.style.background = 'green'
+        }
+
+        function Sair(){
+            fazoL.innerText = 'Saiu'
+            fazoL.style.background = 'red'
+        }
+
+        function click_longo(){
+            fazoL.innerText = 'Atirando'
+            fazoL.style.background = 'blue'
+        }
+
+        function soltou_botao(){
+            fazoL.innerText = 'Soltou'
+            fazoL.style.background = 'purple'
+        }
+    </script>
+</body>
+</html>

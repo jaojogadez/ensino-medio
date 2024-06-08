@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <p id="p1" name="p1" class="p1">Aprendendo DOM</p>
+    <p id="p2" name="p2" class="p2">Manipulando elementos <strong>DOM</strong> </p>
+    <script>
+        // pelo nome da tag
+        //var p1 = document.getElementsByTagName('p')[1]
+
+        // pelo id
+        //var p = document.getElementById('p2')[0]
+
+        // pela propredade name
+        //var p1 = document.getElementsByName("p1")[0]
+
+        // pela classe
+        var p = document.getElementsByClassName('p1')[0]
+
+        
+        window.document.write('Está escrito assim: ', p.innerHTML, '</br>')
+        p.style.color = 'blue'
+        document.write(p.innerHTML)
+    </script>
+</body>
+</html>

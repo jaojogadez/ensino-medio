@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            align-self: flex-start;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+        input{
+            padding: 10px 5px ;
+            border-radius: 25px;
+            border: none;
+            background-color: lightgray;
+        }
+        a{
+            border-radius: 25px;
+            padding: 10px 70px;
+            background-color: darkgray;
+            text-decoration: none;
+            color: white;
+            transition: .7s ease;
+            margin: 25px 0;
+            text-align: center;
+
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.150);
+        }
+        a:hover{
+            background-color: gold;
+            color: black;
+            padding: 10px 90px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    
+    <form>
+        <h1>Formulário</h1>
+        <label>Nome*</label>
+        <input type="text" placeholder="Digite o seu nome" required maxlength="45">
+        <label>Email*</label>
+        <input type="email" placeholder="Digite o seu email" required maxlength="45">
+        <label>Senha*</label>
+        <input type="password" placeholder="Digite a sua senha" required>
+        <a href="" onclick="alerta()">Enviar</a>
+    </form>
+    <script>
+        var btn = document.querySelector('a');
+        function alerta(){
+            window.alert('Seus dados foram enviados :)')
+        }
+    </script>
+    <!-- <script>
+        var nota = window.Number.parseFloat(prompt('Qual a nota do aluno? '))
+        var nota2 = window.Number.parseFloat(prompt('Qual a segunda nota do aluno? '))
+        var nota3 = window.Number.parseFloat(prompt('Qual a terceira nota do aluno? '))
+        var media = (nota + nota2 + nota3)/3
+        if(media < 0 || media > 10){
+            alert('Média Invalida')
+        }
+        else if ( media > 7){
+            alert('Aluno Aprovado')
+        }
+        else {
+            alert('Aluno não Aprovado')
+        }
+    </script> -->
+</body>
+</html>

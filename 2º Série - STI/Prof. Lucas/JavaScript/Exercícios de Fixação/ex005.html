@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nac = window.prompt('Qual sua nacionalidade? ')
+        var id = parseInt(prompt('Qual sua idade? '))
+        if ( id >= 16 && nac == 'brasileiro' || nac == 'brasil' || nac == 'br'){
+            window.alert('Você pode votar e é brasileiro')
+        }
+        else if ( id <= 16 && nac == 'brasileiro' || nac == 'brasil' || nac == 'br'){
+            window.alert('Você não pode votar e é brasileiro')
+        }
+        else {
+            window.alert('Vc not is brazileiro')
+        }
+    </script>
+</body>
+</html>

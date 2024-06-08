@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nota = window.Number.parseFloat(prompt('Qual a nota do aluno? '))
+        var nota2 = window.Number.parseFloat(prompt('Qual a segunda nota do aluno? '))
+        var nota3 = window.Number.parseFloat(prompt('Qual a terceira nota do aluno? '))
+        var media = (nota + nota2 + nota3)/3
+        var falta = window.prompt('Aluno teve falta? ')
+        if( media > 7 && falta == 'Não' || falta == 'nao' || falta == 'n'){
+            alert('Aluno Aprovado')
+        }
+        else{
+            alert('Aluno Reprovado')
+        }
+    </script>
+</body>
+</html>

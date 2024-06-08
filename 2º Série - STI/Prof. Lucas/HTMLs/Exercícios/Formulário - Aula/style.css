@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(125deg ,#2540c5,	#1cacd6,	#44eee1);
+    background-image: url('https://raw.githubusercontent.com/Kageetai/mario-background-parallax/master/img/back.png');
+    background-size: 56%;
+    background-position: 0 0;
+    animation: fundoAnimado 20s linear infinite;
+    background-attachment: fixed;
+}
+
+img{
+    width: 400px;
+}
+
+
+section{
+    position: relative;
+    width: 400px;
+    height: 60px;
+    margin: 5px;
+}
+
+section input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.189);
+}
+
+#btn{
+    padding: 10px 67px;
+    border-radius: 20px;
+    border: none;
+    background-color: darkslateblue;
+    color: white;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: .9s ease;
+}
+#btn:hover{
+    border: 1px solid darkslateblue;
+    background-color: whitesmoke;
+    color: black;
+}
+
+#icone{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    background-image: url('imagens/olho_aberto.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+@keyframes fundoAnimado{
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -1000px 0;
+    }
+
+}

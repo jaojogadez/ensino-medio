@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom - Eventos</title>
+    <style>
+        div{
+            border-radius: 10px;
+            background-color: pink;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+            width: 300px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseleave="sair()" onmousedown="click_longo()" onmouseup="soltou_botao()">
+        <p>Interaja</p>
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area');
+        a.addEventListener('click', clicar)
+        a.addEventListener('maouseenter', entrar)
+        a.addEventListener('mouseleave', sair)
+        function clicar(){
+            a.innerText = 'Clicou'
+            a.style.background = 'green'
+        }
+        function entrar(){
+            a.innerText = 'Clicou'
+            a.style.background = 'yellow'
+        }
+        function sair(){
+            a.innerText = 'Saiu'
+            a.style.background = 'red'
+        }
+        function click_longo(){
+            a.innerText = 'Atirando'
+            a.style.background = 'blue'
+        }
+        function soltou_botao(){
+            a.innerText = 'Soltou'
+            a.style.background = 'purple'
+        }
+    </script>
+</body>
+</html>

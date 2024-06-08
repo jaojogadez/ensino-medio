@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    overflow-y: hidden;
+}
+
+.game-board{
+    width: 100%;
+    height: 500px;
+    border-bottom: 50px solid green;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(#63c4eb, #e0f6ff);
+}
+
+/* Canos */
+.pipe{ 
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    /* animação */
+    animation: pipe-animation 1.5s infinite linear;
+}
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    left:330px;
+    z-index: 9999;
+}
+.clt{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+    z-index: 9999;
+}
+.jump{
+    animation:mario-animation 550ms ease-out;
+}
+.cloud{ 
+    position: absolute;
+    width: 500px;
+    /* animação */
+    animation: cloud 15s infinite linear;
+}
+
+.game-over{
+    visibility: hidden;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(65, 50, 50, 0.25)
+}
+
+.restart{
+    padding: 10px 50px;
+    border-radius: 25px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 1px 1px 10px white;
+    cursor: pointer;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: .3s ease;
+}
+
+.restart:hover{
+    color: white;
+    background-color: skyblue;
+    font-size: 21px;
+}
+
+#dados_jogador, h2 , h3{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    align-content: center;
+    margin: 20px;
+}
+#dados_jogador div{
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.411);
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    background-color: white;
+}
+#dados_jogador{
+    background:#63c4eb;
+    margin: 0;
+}
+
+.pontos, h3{
+    font-size: 25px;
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes pipe-animation{
+    from{
+        right: -80px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes mario-animation{
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 120px;
+    }
+    50%{
+        bottom:120px;
+    }
+    60%{
+        bottom:120px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+@keyframes cloud{
+    from{
+        right: -550px;
+    }
+    to{
+        right: 100%;
+    }
+}
+@keyframes bgColor{
+    from{
+        background-image: linear-gradient(#63c4eb, #e0f6ff);
+    }
+    to{
+        background-image: linear-gradient(rgb(248, 216, 36), #555);
+    }
+}
+
+
+@media (max-width: 620px){
+    .mario{
+        width: 110px;
+        position: absolute;
+        bottom: 0;
+    }
+    .pipe{
+        position: absolute;
+        bottom: 0;
+        width: 50px;
+        animation: pipe-animation 1s infinite linear;
+    }
+}
+
+
+
+
