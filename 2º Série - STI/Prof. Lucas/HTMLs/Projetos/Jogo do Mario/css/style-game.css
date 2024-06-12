@@ -6,6 +6,7 @@
 }
 body{
     overflow-y: hidden;
+    min-height: 50vh;
 }
 
 .game-board{
@@ -30,7 +31,7 @@ body{
     width: 150px;
     position: absolute;
     bottom: 0;
-    left:330px;
+
     z-index: 9999;
 }
 .clt{
@@ -53,14 +54,24 @@ body{
 .game-over{
     visibility: hidden;
     display: flex;
+    flex-direction: column-reverse;
     position: fixed;
+    row-gap: 15px;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     justify-content: center;
     align-items: center;
-    background-color: rgba(65, 50, 50, 0.25)
+    background-color: rgba(65, 50, 50, 0.45)
+}
+#showPontos{
+    margin-top: 10rem;
+    font-size: 1.5em;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: -1px ;
 }
 
 .restart{
@@ -73,6 +84,10 @@ body{
     letter-spacing: 2px;
     text-transform: uppercase;
     transition: .3s ease;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .restart:hover{
@@ -89,22 +104,29 @@ body{
     margin: 20px;
 }
 #dados_jogador div{
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.411);
     margin: 20px;
     border-radius: 20px;
     display: flex;
+    align-items: center;
     background-color: white;
 }
 #dados_jogador{
     background:#63c4eb;
     margin: 0;
 }
-
+#name{
+    font: normal bolder 1.4em arial;
+    color: darkred;
+}
+#pontos h2{
+    gap: 10px;
+}
 .pontos, h3{
     font-size: 25px;
     color: red;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 @keyframes pipe-animation{
     from{

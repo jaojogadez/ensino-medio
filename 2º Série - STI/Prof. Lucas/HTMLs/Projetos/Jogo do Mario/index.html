@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Password</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="imagens/Mario-ico.ico" type="image/x-icon">
+</head>
+<body onload="tocarAudio()">
+    <!-- Tocar Música -->
+        <audio id="musica">
+            <source src="audios/intro.mp3" type="audio/mpeg">
+        </audio>
+    <!-- Imagem de Fundo -->
+        <div>
+            <img 
+                src="https://1000logos.net/wp-content/uploads/2021/05/Super-Mario-logo.png" 
+                alt=""
+            >
+        </div>
+    <!-- Input Nome -->
+        <section class="form">
+            <input type="text" placeholder="Digite seu nome" id="nome">
+        </section>
+    <!-- Input Senha -->
+        <section class="form">
+            <input type="password" placeholder="Digite sua senha" id="password" >
+            <div id="icone" onclick="mostrarEsconder()"></div>
+        </section>
+    <!-- Botão -->
+        <section> 
+            <a href="game.html">
+                <input type="submit" value="Confirmar" id="botao" onload="carregar()" class="btn">
+            </a>
+        </section>
+    <!-- Script para pegar o nome -->
+        <script>
+            document.getElementById("botao").addEventListener("click", function() {
+                var nomeInput = document.getElementById("nome").value;
+                localStorage.setItem("nomeUsuario", nomeInput);
+            });
+        </script>
+    <!-- Script Geral -->
+        <script src="script.js"></script>
+</body>
+</html>

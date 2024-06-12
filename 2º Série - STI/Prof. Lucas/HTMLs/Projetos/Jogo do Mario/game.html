@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br" onload="onloadGame()">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Run</title>
+    <link rel="shortcut icon" href="imagens/Mario-ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style-game.css">
+</head>
+<body onload="tocarAudio2()">
+    <!-- Tocar Música -->
+    <audio id="musica2">
+        <source src="audios/fase.mp3" type="audio/mpeg">
+    </audio>
+    <!-- Dados do jogador -->
+    <div id="dados_jogador">
+        <div id="jogador">
+            <h2>Jogador:</h2>
+            <div id="name"></div>
+        </div>
+        <div id="pontos">
+            <h2>Pontuação: <span id="score">0</span></h2>
+        </div>
+    </div>
+    <!-- Quadro do jogo -->
+    <div class="game-board">
+        <img src="imagens/clouds.png" class="cloud">
+        <img src="imagens/mario.gif" class="mario">
+        <img src="imagens/pipe.png" class="pipe">
+    </div>
+    <!-- Botão quando há colisão -->
+    <div class="game-over">
+        <a href="game.html" >
+            <button class="restart">
+                Reiniciar
+            </button>
+        </a>
+        <audio id="morteSom">
+            <source src="audios/y2meta.com - Som de morte do Roblox (320 kbps).mp3" type="audio/mpeg">
+        </audio>
+        <div>
+            <p id="showPontos">Sua Pontuação:</p>
+        </div>
+    </div>
+    <!-- Script para botar o nome -->
+    <script>
+       document.addEventListener("DOMContentLoaded", function() {
+            var nomeUsuario = localStorage.getItem("nomeUsuario");
+            var nameDiv = document.getElementById("name");
+            nameDiv.innerText = nomeUsuario;
+       });
+    </script>
+    <!-- Script Geral -->
+    <script src="script.js"></script>
+</body>
+</html>
