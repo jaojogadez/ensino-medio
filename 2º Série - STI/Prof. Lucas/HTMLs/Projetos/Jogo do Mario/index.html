@@ -21,20 +21,22 @@
             >
         </div>
     <!-- Input Nome -->
-        <section class="form">
-            <input type="text" placeholder="Digite seu nome" id="nome">
-        </section>
-    <!-- Input Senha -->
-        <section class="form">
-            <input type="password" placeholder="Digite sua senha" id="password" >
-            <div id="icone" onclick="mostrarEsconder()"></div>
-        </section>
-    <!-- Botão -->
-        <section> 
-            <a href="game.html">
-                <input type="submit" value="Confirmar" id="botao" onload="carregar()" class="btn">
-            </a>
-        </section>
+        <form action="" >
+            <section class="form">
+                <input type="text" placeholder="Digite seu nome" id="nome">
+            </section>
+                <!-- Input Senha -->
+            <section class="form">
+                <input type="password" placeholder="Digite sua senha" id="password" >
+                <div id="icone" onclick="mostrarEsconder()"></div>
+            </section>
+                <!-- Botão -->
+            <section>
+                <a href="game.html">
+                    <input type="submit" value="Confirmar" id="botao" onload="carregar()" class="btn">
+                </a>
+            </section>
+        </form>
     <!-- Script para pegar o nome -->
         <script>
             document.getElementById("botao").addEventListener("click", function() {
