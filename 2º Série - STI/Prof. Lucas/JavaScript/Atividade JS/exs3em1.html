@@ -96,6 +96,17 @@
             </section>
             <div id="result"></div>
         </div>
+        <!-- 3) Input de 1 valor: Mostrar a tabuada para o usuário do número inserido. Saída de dado formatada (2 x 1 = 2) -->
+        <div class="exercicios">
+            <h2>Tabuada de qual número vc quer?</h2>
+            <div>
+                <label for="number">Digite um número: </label>
+                <input type="number" id="tab">
+                <input type="submit" value="Enviar" onclick="calc()" class="button">
+            </div>
+            <div id="tabuada"></div>
+        </div>
+
     </main>
     <script>
         // script para o ex 01
@@ -111,43 +122,49 @@
             var nota03 = Number(num03.value);
             var nota04 = Number(num04.value);
             var media = (nota01 + nota02 + nota03 + nota04)/4
-            if( media < 0 || media > 10){
-                window.alert('Média Inválida')
+            if( media >= 6 && media <= 10){
+                div.innerHTML = '<strong>Aluno Aprovado</strong>' + ` - Média: ${media}`
             }
-            else if (nota01 < 0 || nota02 < 0 || nota03 < 0 || nota04 < 0){
-                window.alert('Uma nota não pode ser menor que 0')
+            else if (media >= 4 && media < 6){
+                div.innerHTML = '<strong>Aluno em Recuperação</strong>' + ` - Média: ${media}`
             }
-            else if(nota01 > 10 || nota02 > 10 || nota03 > 10 || nota04 > 10){
-                window.alert('Uma nota não pode ser maior que 10')
+            else if(media >= 0 && media < 4){
+                div.innerHTML = '<strong>Aluno Reprovado</strong>' + ` - Média: ${media}`
             }
             else{
-                div.innerHTML = " "
-                if(media > 6){
-                    div.innerHTML = '<strong>Aluno Aprovado</strong>' + ` - Média: ${media}`
-                }
-                else{
-                    div.innerHTML = '<strong>Aluno Reprovado</strong>' + ` - Média: ${media}`
-                    return
-                }
+                window.alert('Média Inválida')
             }
         };
 
-        // script para o ex02
+        // script para o ex 02
 
-        var num01 = document.getElementById('num01');
-        var num02 = document.getElementById('num02');
-        var div = document.getElementById('result');
-        function calc(){
-            var valor01 = Number(num01.value);
-            var valor02 = Number(num02.value);
-            var soma = valor01 + valor02
-            var subt = valor01 - valor02
-            var mult = valor01 * valor02
-            var divi = valor01 / valor02
-            div.innerHTML = `Soma: ${soma}<br>Subtração: ${subt}`
+        var num1 = document.getElementById('num1')
+        var num2 = document.getElementById('num2')
+        var div02 = document.getElementById('resultado')
+        function calcular (){
+            var v1 = Number(num1.value)
+            var v2 = Number(num2.value)
+            var soma = v1 + v2
+            var sub = v1 - v2
+            var mult = v1 * v2
+            var dividir = v1 / v2
+            div02.innerHTML = `Valores Somados: <strong>${soma}</strong><br>` + `Valores Subtraidos: <strong>${sub}</strong><br>` + `Valores Multiplicados: <strong>${mult}</strong><br>` + `Valores Dividos: <strong>${dividir}</strong>` 
         }
 
+        // script para o ex 03
 
+        var n = document.getElementById('tab')
+        var tab = document.getElementById('tabuada')
+        function calc(){
+            var num = Number(n.value)
+            var c 
+            var calc = []
+            tab.innerHTML = " "
+            for(c = 1; c < 11; c++){
+                calc[c] = num * c
+                tab.innerHTML += `${num} x ${c} = ${calc[c]}<br>`
+            }
+        }
     </script>
 </body>
 </html>
