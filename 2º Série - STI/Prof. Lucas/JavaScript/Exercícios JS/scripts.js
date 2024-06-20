@@ -21,7 +21,7 @@ function media(){
         div.innerHTML = '<strong>Aluno Reprovado</strong>' + ` - Média: ${media}`
     }
     else{
-       window.alert('Média Inválida')
+        window.alert('Média Inválida')
     }
 };
 
@@ -193,11 +193,28 @@ function ex09(){
 }
 
 //ex10
-var oculto = document.getElementById('aaa')
-function desolcutar(){
-    oculto.style.display = 'block'
-}
-window.document.getElementById('button').addEventListener('click', function(){
-    var ex10 = document.getElementById('cont');
-    var ex10value = Number(ex10.value)
-})
+window.document.getElementById('btn').addEventListener('click', function(){
+    var ex10 = document.getElementById('ex10');
+    var ex10value = Number(ex10.value);
+
+    var oculto = document.getElementById('aaa');
+    oculto.style.display = 'block';
+
+    window.document.getElementById('button').addEventListener('click', function(){
+        var ex10num = document.getElementById('cont');
+        var ex10numvalue = Number(ex10num.value);
+        var soma = 0;
+        for( var contar = ex10value; contar >=0; contar --){
+            soma = soma + ex10numvalue
+        }
+        
+        console.log(ex10value)
+        console.log(ex10numvalue)
+        console.log(soma)
+    })
+});
+
+
+
+
+
