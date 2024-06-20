@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Exercícios de JavaScript</h1>
+    <main>
+        <section class="line">
+            <!-- 1) Input de 4 notas e cálculo de média de um aluno. Ao final, mostrar se o mesmo está aprovado, de recuperação ou reprovado. -->
+            <div class="exercicios">
+                <h2>Calcule a Média do Aluno</h2>
+                <section class="inputs">
+                    <label for="number">Nota 1</label>
+                    <input type="number" id="n1">
+                    <label for="number">Nota 2</label>
+                    <input type="number" id="n2">
+                    <label for="number">Nota 3</label>
+                    <input type="number" id="n3">
+                    <label for="number">Nota 4</label>
+                    <input type="number" id="n4">
+                    <input type="submit" value="Enviar" onclick="media()" class="btn">
+                </section>
+                <div id="media">
+                    <div id="cond"></div>
+                </div>
+            </div>
+            <!-- 2) Input de dois valores: realizar as operações aritméticas básicas e mostrar o resultado para o usuário. -->
+            <div class="exercicios">
+                <h2>Calculadora Simples</h2>
+                <section class="inputs">
+                    <label for="number">Insira o valor 01</label>
+                    <input type="number" id="num1">
+                    <label for="number">Insira o valor 02</label>
+                    <input type="number" id="num2">
+                    <input type="submit" value="Calcular"  onclick="calcular()" class="btn">
+                </section>
+                <div id="resultado"></div>
+            </div>
+            <!-- 3) Input de 1 valor: Mostrar a tabuada para o usuário do número inserido. Saída de dado formatada (2 x 1 = 2) -->
+            <div class="exercicios">
+                <h2>Tabuada de qual número vc quer?</h2>
+                <div>
+                    <label for="number">Digite um número: </label>
+                    <input type="number" id="tab">
+                    <input type="submit" value="Enviar" onclick="calc()" class="btn">
+                </div>
+                <div id="tabuada"></div>
+            </div>
+        </section>
+        <section class="line">
+            <!-- faça um algoritmo que leia um número e ao final, mostre se o número é maior que 10 -->
+            <div class="exercicios">
+                <h2>É maior do que 10?</h2>
+                <input type="number" name="ex1" id="ex1" placeholder="Diga um número">
+                <input type="submit" value="Enviar" class="btn" onclick="ex01()">
+                <div id="ex1r"></div>
+            </div>
+            
+            <!-- faça um algoritmo que leia DOIS valores e ao final mostre qual deles é o maior -->
+            <div class="exercicios">
+                <h2>Qual dos dois é maior?</h2>
+                <div class="embaixo">
+                    <input type="number" name="ex2" id="ex2" placeholder="Diga um número">
+                    <input type="number" name="ex2" id="ex2.2" placeholder="Diga um número">
+                    <input type="submit" value="Enviar" onclick="ex02()" class="btn">
+                    <div id="ex2r"></div>
+                </div>
+            </div>
+            <!-- faça um algoritmo que leia o ano de nascimento de um rapaz, e calcule quantos anos falta para o alistamento militar. Se já passou o prazo, quantos anos fazem que ele já o fez. -->
+            <div class="exercicios embaixo">
+                <h2>Alistamento Militar</h2>
+                <label for="nascimento">Que ano vc nasceu?</label>
+                <input type="number" name="nasc" id="nasc" placeholder="Insira aqui" minlength="2" maxlength="4">
+                <input type="submit" value="Enviar" onclick="ex03()" class="btn">
+                <div id="ex3r"></div>
+            </div>
+        </section>
+        <section class="line">
+            <!-- Faça um algoritmo que leia duas notas de um aluno, e ao final mostre se o mesmo está aprovado ou reprovado. Utilizar média 6 -->
+            <div class="exercicios">
+                <h2>Aluno Aprovado ou Reprovado?</h2>
+                <form onsubmit="ex04(event)">
+                    <div class="embaixo">
+                        <label for="nota1">Nota 1</label>
+                        <input type="number" name="nota1" id="nota1" required min="0" max="10" step="0.1">
+                        <label for="nota2">Nota 2</label>
+                        <input type="number" name="nota2" id="nota2" required min="0" max="10" step="0.1">
+                        <input type="submit" value="Enviar" class="btn" onclick="ex04()">
+                        <div id="ex4r"></div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- faça um algoritmo que leia duas notas de um aluno, e ao final mostre se o mesmo está aprovado, em recuperação ou reprovado. Entre 0 e 3,99 reprovado, entre 4 e 5,99 recuperação, entre 6 e 10,0 aprovado -->
+            <div class="exercicios">
+                <h2>Aprovado / Rec / Reprovado</h2>
+                <form onsubmit="ex05(event)">
+                    <div class="embaixo">
+                        <label for="n1i">Nota 1</label>
+                        <input type="number" name="n1" id="n1i" min="0" max="10" required step="0.1">
+                        <label for="n2i">Nota 2</label>
+                        <input type="number" name="n2" id="n2i" min="0" max="10" required step="0.1">
+                        <label for="n3i">Nota 3</label>
+                        <input type="number" name="n3" id="n3i" min="0" max="10" required step="0.1">
+                        <label for="n4i">Nota 4</label>
+                        <input type="number" name="n4" id="n4i" min="0" max="10" required step="0.1">
+                        <input type="submit" value="Enviar" class="btn" onclick="ex05()">
+                        <div id="ex5r"></div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- > faça um algoritmo para verificar em qual categoria um atleta de boxe se encaixa de acordo com seu peso</ -->
+            
+        </section>
+        <section class="line">
+            <!--  faça um algoritmo que faça uma contagem até 10, começando por 0. -->
+            <div class="exercicios">
+                <h2>Contar até 10</h2>
+                
+                <input type="submit" value="Enviar" class="btn" onclick="ex07()">
+                <div id="ex7r"></div>
+                
+            </div>
+            <!-- Faça um algoritmo que leia um número inserido pelo usuário de 1 a 10. Faça uma contagem regressiva até 0 a partir do número inserido. -->
+            <div class="exercicios embaixo">
+                <h2>Contagem Regressiva</h2>
+                <label for="a">De qual número quer começar?</label>
+                <input type="number" name="a" id="a" placeholder="Digite aqui">
+                <input type="submit" value="Enviar" class="btn" onclick="ex08()">
+                <div id="ex8r"></div>
+            </div>
+            <!-- faça um algoritmo que leia um número inserido pelo usuário e continue lendo números até que o usuário digite 0 (zero). Ao final, mostrar "o programa foi encerrado pelo usuário".</ -->
+            <div class="exercicios">
+                <h2>Digite 0 para encerrar</h2>
+                <label for="ex9">Digite algume número</label>
+                <input type="number" name="ex9" id="ex9" placeholder="Insira aqui">
+                <input type="submit" value="Enviar" onclick="ex09()" class="btn">
+                <div id="ex9r"></div>
+            </div>
+        </section>
+        <section class="line">
+            <!-- faça um algoritmo que leia uma quantidade de números determinada pelo usuário. Ao final, mostrar a somatória de todos os números inseridos, até a quantidade de números inseridos acabarem.
+ -->
+            <div class="exercicios embaixo">
+                <h2>Some números</h2>
+                <label for="ex10">Quantos número vc quer somar?</label>
+                <div class="dolado">
+                    <input type="number" name="ex10" id="ex10" placeholder="Digite aqui">
+                    <input type="submit" value="Enviar" class="btn" onclick="desolcutar()">
+                </div>
+                <div class="ocultar" id="aaa">
+                    <label for="cont">Digite um número</label>
+                    <div class="dolado">
+                        <input type="number" name="cont" id="cont" placeholder="Digite aqui">
+                        <input type="submit" value="Enviar" class="btn" id="button">
+                        <div id="ex10r"></div>
+                    </div>
+                </div>
+            </div>
+ 
+        </section>
+        
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
