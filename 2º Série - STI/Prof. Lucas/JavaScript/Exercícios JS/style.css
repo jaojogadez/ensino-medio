@@ -86,3 +86,9 @@ input{
 .ocultar{
     display: none;
 }
+
+#inputs-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}

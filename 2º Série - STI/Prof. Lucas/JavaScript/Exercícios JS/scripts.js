@@ -196,22 +196,42 @@ function ex09(){
 window.document.getElementById('btn').addEventListener('click', function(){
     var ex10 = document.getElementById('ex10');
     var ex10value = Number(ex10.value);
-
     var oculto = document.getElementById('aaa');
-    oculto.style.display = 'block';
+    if(ex10value > 0){
+        oculto.style.display = 'block';
+
+        var inputsContainer = document.getElementById('inputs-container');
+        inputsContainer.innerHTML = ''; // Limpa inputs anteriores
+
+        // Cria os inputs dinamicamente
+        for (var i = 0; i < ex10value; i++) {
+            var input = document.createElement('input');
+            input.type = 'number';
+            input.name = 'number' + i;
+            input.id = 'number' + i;
+            input.placeholder = 'Digite um número';
+            inputsContainer.appendChild(input);
+        }
+    }
+    else{
+        oculto.style.display = 'none';
+    }
+    
 
     window.document.getElementById('button').addEventListener('click', function(){
-        var ex10num = document.getElementById('cont');
-        var ex10numvalue = Number(ex10num.value);
-        var soma = 0;
-        for( var contar = ex10value; contar >=0; contar --){
-            soma = soma + ex10numvalue
-        }
+        var div10 = document.getElementById('ex10r');
+        var inputs = document.querySelectorAll('#inputs-container input');
+        var somar = 0;
         
-        console.log(ex10value)
-        console.log(ex10numvalue)
-        console.log(soma)
-    })
+        inputs.forEach(function(input) {
+            var value = Number(input.value);
+            if (!isNaN(value)) {
+                somar += value;
+            }
+        });
+
+        div10.innerHTML = `<strong>A soma dos números é ${somar}`;
+    });
 });
 
 
