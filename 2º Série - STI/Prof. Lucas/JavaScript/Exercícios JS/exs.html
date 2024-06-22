@@ -73,9 +73,11 @@
             <!-- faça um algoritmo que leia o ano de nascimento de um rapaz, e calcule quantos anos falta para o alistamento militar. Se já passou o prazo, quantos anos fazem que ele já o fez. -->
             <div class="exercicios embaixo">
                 <h2>Alistamento Militar</h2>
-                <label for="nascimento">Que ano vc nasceu?</label>
-                <input type="number" name="nasc" id="nasc" placeholder="Insira aqui" minlength="2" maxlength="4">
-                <input type="submit" value="Enviar" onclick="ex03()" class="btn">
+                <form method="get" onsubmit="ex03(event)">
+                    <label for="nascimento">Que ano vc nasceu?</label>
+                    <input type="number" name="nasc" id="nasc" placeholder="Insira aqui" required min="1900" max="2024">
+                    <input type="submit" value="Enviar" onclick="ex03()" class="btn">
+                </form>
                 <div id="ex3r"></div>
             </div>
         </section>

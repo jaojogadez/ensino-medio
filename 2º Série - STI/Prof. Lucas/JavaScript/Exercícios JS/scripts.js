@@ -96,7 +96,8 @@ function ex02(){
 
 var ex3 = document.getElementById('nasc');
 var  div3 = document.getElementById('ex3r');
-function ex03(){
+function ex03(event){
+    event.preventDefault();
     var ex3value = Number(ex3.value);
     var idade = 2024 - ex3value 
     var prazo = idade - 18
