@@ -236,6 +236,23 @@ window.document.getElementById('btn').addEventListener('click', function(){
 });
 
 
+// ex11
 
-
-
+function ex11(){
+    var ex11 = document.getElementById('ex11');
+    var contar = 0
+    
+    
+   
+        contagem = setInterval(function(){
+            ex11.innerHTML += contar++ + ' '
+        },300);
+    
+    window.document.addEventListener('keydown', function(event11){
+        if(event11.code === 'Space'){
+            clearInterval(contagem)
+            ex11.innerHTML = '<strong>Cabou!</strong>'
+        }
+    })
+   
+}
