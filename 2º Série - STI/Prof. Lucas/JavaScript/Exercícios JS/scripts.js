@@ -240,6 +240,7 @@ window.document.getElementById('btn').addEventListener('click', function(){
 
 function ex11(){
     var ex11 = document.getElementById('ex11');
+    var ex112 = document.getElementById('cabou');
     var contar = 0
     
     
@@ -251,7 +252,8 @@ function ex11(){
     window.document.addEventListener('keydown', function(event11){
         if(event11.code === 'Space'){
             clearInterval(contagem)
-            ex11.innerHTML = '<strong>Cabou!</strong>'
+            ex112.innerHTML = '<strong>Cabou!</strong>';
+            ex11.style.display = 'none';
         }
     })
    
