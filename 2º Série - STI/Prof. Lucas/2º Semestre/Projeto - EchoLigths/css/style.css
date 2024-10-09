@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* Variables CSS */
+
+:root{
+    /* Paleta Principal */
+    --color-black:#12130F;
+    --color-darkgren:#5B9279;
+    --color-green:#8FCB9B;
+    --color-white:#EAE6E5;
+    --color-brown:#8F8073;
+
+    /* Paleta Alternativa */
+    --Verde-Pinheiro:#2E8B57;
+    --Vermelho-Natal:#B22222;
+    --Branco-Neve:#F8F8FF;
+    --Dourado-Metálico:#DAA520;
+    --Azul-Neon:#00CED1;
+
+    /* Tipografia */
+    --header-font: "Orbitron";
+    --secondary-font: "Roboto", sans-serif;
+}
+
+
+/* .navbar{
+    background-color: var(--color-black) !important;
+} */
+
+body, html{
+    font: normal normal 1em var(--secondary-font);
+    color: var(--Branco-Neve);
+}
+
+body, main{
+    min-height: 100vh;
+}
+
+nav{
+    font: normal normal 1em var(--header-font);
+    letter-spacing: 2.5px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.05);
+}
+
+.header{
+    font-family: var(--header-font);
+}
+
+.menu--movel { 
+    position: fixed;
+    top: 0;
+    transform: translateY(-100%);
+    transition: .25s; 
+    z-index: 999;
+}
+
+.menu--show {
+    transform: translateY(0%);
+    transition: .6s;
+}
+
+#homeContent{
+    animation: appear .555s;
+}
+
+#natal-tree{
+    animation: translateLeft .8s;
+}
+/* Responsividade para telas maiores */
+@media (min-width: 992px){
+   #homeContent{
+       text-align: start !important;
+   }
+}
+
+
+@keyframes appear{
+    from{
+        opacity: 0.5;
+        transform: scale(0.5);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes translateLeft{
+    from{
+        opacity: 0.5;
+        transform: translateX(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
