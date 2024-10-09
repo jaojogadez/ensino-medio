@@ -1,0 +1,158 @@
+nav{
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.400);
+}
+
+.dropdown-menu li, .dropdown-menu label{
+    cursor: pointer;
+}
+#logo-container{
+    margin-right: 2rem;
+}
+#navbarText{
+    margin-left: 2rem;
+}
+:root{
+    --main-color: #25282e;
+}
+
+*{
+    color: var(--main-color);
+}
+
+a, i{
+    transition: .5s;
+    text-decoration: none;
+}
+
+.secondary-color{
+    color: #555;
+}
+
+.center-image{
+    background-size: cover;
+    background-position: center;
+}
+
+.btn{
+    text-decoration: none;
+    background-color: var(--main-color);
+    color: white;
+    padding: 7px 18px;
+    border-radius: 0;
+}
+.dark-btn{
+    text-decoration: none;
+
+    background-color: aliceblue;
+    color: #25282e;
+    padding: 7px 18px;
+    border-radius: 0;
+}
+.btn:hover{
+    background-color: #333;
+    color: white;
+}
+
+/* Header Style */
+#header{
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+#header p{
+    margin-bottom: 0;
+}
+
+#logo-container{
+    display: flex;
+    justify-content: center;
+}
+
+#logo{
+    width: 38px !important;
+    margin-right: 15px;
+}
+
+/* Navbar */
+
+#navbar{
+    padding: 10px;
+    margin: 10px auto;
+}
+
+#navbar a{
+    width: 80px;
+    color: #444;
+}
+
+#navbar a:hover{
+    color: #c1b696;
+}
+
+.small-image-container{
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.150 fixed);
+}
+/* Main Style */
+
+.main-image{
+    height: 400px;
+    background: black url('../images/g_1.jpg') no-repeat top center fixed;
+    background-size: cover;
+    margin-bottom: 30px;
+    position: relative;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.251);
+}
+
+/* Galley Style */
+
+#img-2{
+    background: url('../images/g_2.jpg') no-repeat top center fixed;
+    background-size: cover;
+}
+#img-3{
+    background: url('../images/g_3.jpg') no-repeat top center fixed;
+    background-size: cover;
+}
+#img-4{
+    background: url('../images/g_4.jpg') no-repeat top center fixed;
+    background-size: cover;
+}
+#img-5{
+    background: url('../images/g_5.jpg') no-repeat top center fixed;
+    background-size: cover;
+}
+#img-6{
+    background: url('../images/g_6.jpg') no-repeat top center fixed;
+    background-size: cover;
+}
+
+#gallery-container h1{
+    text-align: center;
+}
+
+#gallery-container h1, 
+#gallery-container .col-md-6,
+#gallery-container .col-xs-12{
+    margin-bottom: 50px !important;
+}
+
+.small-image-container{
+    height: 250px;
+    margin-bottom: 20px;
+}
+
+footer{
+    border-top: 1px solid #ccc;
+    height: 250px;
+    padding: 30px;
+}
+
+footer i{
+    font-size: 20px;
+}
+
+#social-icons-container{
+    text-align: center;
+}
+

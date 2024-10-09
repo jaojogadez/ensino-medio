@@ -1,0 +1,455 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+/* Variáveis */
+:root{
+    --branco-fumaca: #e7e7e7;
+    --main-font: "Oswald", sans-serif;
+}
+
+/* General Styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    background-color: var(--branco-fumaca);
+    font-family: var(--main-font);
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+main{
+    display: block;
+    margin-top: 90px;
+    width: min-content;
+}
+.main--blur{
+    filter: blur(5px);
+    pointer-events: none;
+    opacity: 0.5;
+    transition: .25s ease;
+}
+header{
+    display: block;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1{
+    font-size: 1.5em;
+}
+
+main h2{
+    align-self: self-start;
+    font-size: 1.3em;
+    margin-left: 20px;
+}
+
+/* Alert Style */
+.alert{
+    display: flex;
+    flex-flow: column nowrap;
+    position: absolute;
+    top: 135px;
+    left: 0;
+    z-index: 9999;
+    background-color: white;
+    padding: 25px;
+    width: 325px;
+    height: 160px;
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.158);
+    transition: .25s ease;
+    transform: translateX(-100%);
+}
+.alert .btn{
+    width: 80px;
+    align-self: flex-end;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    color: white;
+
+}
+.alert--show{
+    transform: translateX(0%);
+    transition: .6s;
+}
+.alert-pc{display: none;}
+
+
+/* Cards Styles */
+.projectClasse{
+    position: relative;
+    display: flex;
+    align-items: end;
+    cursor: pointer;
+    width: 350px;
+    height: 200px;
+    margin: 5px 0 15px 0;
+    transition: 350ms;
+    border-radius: 10px;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+}
+/* .animation-normal{
+    animation: appear2  linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30% ;
+}
+.animation-reverse{
+    animation: appear3  linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30% ;
+} */
+
+.projectClasse:hover{
+    border-image: fill 0 linear-gradient(#0005, #000);
+}
+
+/* Project Style Flex-Container */
+.projects{
+    padding: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    transition: width .5s, heigth .5s;
+    transition-timing-function: ease;
+}
+.projectContent{
+    margin-bottom: 32px;
+}
+
+/* Icons Styles */
+
+.icons{
+    position: absolute;
+    display: none;
+    flex-flow: row-reverse nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    top: 0;
+    width: 410px;
+    height: 210px;
+}
+
+.iconsMobile{
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0 10px;
+}
+.iconsMobile > .material-symbols-outlined{
+    color: #000;
+}
+.iconContent{
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 3px;
+}
+
+
+
+h4{
+    padding: 5px;
+    font-size: 1em;
+    color: white;
+    letter-spacing: .5px;
+    font-weight: normal;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.792);
+}
+h3{
+    display: none;
+    color:white;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.658);
+}
+
+#p2 h4{
+    text-shadow: 0px 0px 5px black;
+    margin-left: 3px;
+}
+
+#project1{
+    background: black url('../imgs/tencobus.png') no-repeat top center;
+    background-size: cover;
+    border-radius: 10px;
+}
+#project1:hover{
+    background-image: url('../imgs/tecnobus-gif.gif');
+    border-radius: 10px;
+}
+#project2{
+    background: black url('../imgs/diskdiaristapg.png') no-repeat top center;
+    background-size: cover;
+    border-radius: 10px;
+}
+#project2:hover{
+    background-image: url('../imgs/diarista-gif.gif');
+    border-radius: 10px;
+}
+#project3{
+    background: black url('../imgs/secking.png') no-repeat top center;
+    background-size: cover;
+    border-radius: 10px;
+}
+#project3:hover{
+    background-image: url('../imgs/secking-gif.gif');
+    border-radius: 10px;
+}
+#project4{
+    background: black url('../imgs/mariorun.png') no-repeat top center;
+    background-size: cover;
+    border-radius: 10px;
+}
+#project4:hover{
+    background-image: url('../imgs/mariogif.gif');
+    background-size: contain;
+    border-radius: 10px;
+}
+
+#project5{
+    background: black url('../imgs/android.png') no-repeat top center;
+    background-size: cover;
+    border-radius: 10px;
+}
+#project5:hover{
+    background-image: url('../imgs/androidgif.gif');
+    border-radius: 10px;
+}
+#project6{
+    background: black url('../imgs/cordel.png') no-repeat top center;
+    background-size: cover;
+    border-radius: 10px;
+}
+#project6:hover{
+    background-image: url('../imgs/cordelgif.gif');
+    border-radius: 10px;
+}
+#project7{
+    background: black url('../imgs/social.png') no-repeat top center;
+    background-size: cover;
+    border-radius: 10px;
+}
+#project7:hover{
+    background-image: url('../imgs/socialgif.gif');
+    border-radius: 10px;
+}
+#project8{
+    background: black url('../imgs/login.png') no-repeat top center;
+    background-size: cover;
+    border-radius: 10px;
+}
+#project8:hover{
+    background-image: url('../imgs/logingif.gif');
+    background-size: cover;
+    border-radius: 10px;
+}
+#project9{
+    background: black url('../imgs/exsjs.png') no-repeat top center;
+    background-size: cover;
+    border-radius: 10px;
+}
+#project9:hover{
+    background-image: url('../imgs/exjsgif.gif');
+    background-size: cover;
+    border-radius: 10px;
+}
+
+#p1{
+    display: none;
+    transition: .3s ease;
+}
+#p2{
+    display: none;
+    transition: .3s ease;
+}
+#p3{
+    display: none;
+    transition: .3s ease;
+}
+#p4{
+    display: none;
+    transition: .3s ease;
+}
+#p5{
+    display: none;
+    transition: .3s ease;
+}
+#p6{
+    display: none;
+    transition: .3s ease;
+}
+#p7{
+    display: none;
+    transition: .3s ease;
+}
+#p8{
+    display: none;
+    transition: .3s ease;
+}
+#p9{
+    display: none;
+    transition: .3s ease;
+}
+
+.projeto{
+    display: none;
+}
+
+a{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    color: #222;
+}
+
+.sectionMovel{
+    position: absolute;
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    width: 350px;
+    height: 380px;
+    border-radius: 20px;
+    z-index: 9999;
+    top: 100px;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.562);
+    transition: .4s ease;
+}
+#tecnobusimg{
+    background: black url('../imgs/tecnobus-gif.gif') no-repeat center center;
+    background-size: cover;
+    width: 320px;
+    height: 180px;
+    border-radius: 10px;
+}
+.links{
+    width: 320px;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: space-between;
+    margin: 15px 0;
+    padding: 5px;
+}
+.sectionMovel h2{
+    align-self: flex-start;
+    margin: 5px 0;
+}
+.card{
+    background-color: transparent;
+}
+
+.info-project{
+    width: 350px;
+    display: flex;
+    padding: 2px;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.info-project h4{
+    align-self: flex-end;
+}
+.info-project span{
+    width: clamp(100px, 400px, 235px);
+    display: flex;
+    flex-flow: row wrap-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1px;
+    padding: 2px;
+}
+#info-diarista span{
+    width: auto;
+}
+.info-project > span > img{
+    width: 75px;
+    height: 25px;
+    border-radius: 10px;
+}
+.auto > img{
+    height: 25px;
+    border-radius: 10px;
+}
+
+.menu--movel { 
+    position: fixed;
+    top: 0;
+    height: 70px;
+    transform: translateY(-100%); /* O estado padrão é oculto */
+    transition: .25s; /* A velocidade de transição para o estado padrão é a velocidade de ocultação. */
+    z-index: 999;
+}
+.menu--show {
+    transform: translateY(0%);
+    transition: .6s;
+}
+
+/* Animation CSS */
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes appear2{
+    from{
+        opacity: 0;
+        transform: translateX(-75px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+        
+    }
+}
+@keyframes appear3{
+    from{
+        opacity: 0;
+        transform: translateX(65px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+        
+    }
+}
+

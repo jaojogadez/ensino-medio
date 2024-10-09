@@ -1,0 +1,11 @@
+.container-fluid{
+    background-color: white;
+}
+
+.row, .col, .col-1, .col-2{
+    border: 1px solid white;
+}
+
+.container-md{
+    height: 350px;
+}

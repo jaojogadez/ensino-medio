@@ -1,0 +1,23 @@
+
+
+.container, .row, .col, .col-4, .col-2, .col-1, .col-11, .col-3{
+    border: 1px solid white;
+    height: 100%;
+}
+.container{
+    border-color: chartreuse;
+    padding: 20px;
+}
+
+.row{
+    border-color: yellow;
+    padding: 10px;
+}
+
+
+.col, .col-4, .col-2, .col-1, .col-11, .col-3{
+    text-align: center;
+    padding: 5px;
+    height: 100%;
+    margin: 0;
+}

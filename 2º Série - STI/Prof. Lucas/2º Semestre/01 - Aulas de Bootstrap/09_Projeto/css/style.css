@@ -1,0 +1,43 @@
+
+/* Forms */
+
+#form-container{
+    background-color: #fff;
+    margin: 25px auto;
+}
+
+@media (min-width: 768px){
+    #form-container{
+        margin: 50px auto;
+        padding: 30px;
+    }
+}
+
+#form-container .h2{
+    font-weight: 900;
+}
+
+#form-container a{
+    color: #222;
+    transition: .5s;
+    text-decoration: none;
+}
+
+#form-container a:hover{
+    color: #6c63ff;
+    text-decoration: underline;
+}
+
+#form-container form{
+    border:none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+}
+
+#form-container .form-floating label{
+    color: #ccc;
+}
+
+input[type="checkbox"], label{
+    cursor: pointer;
+}

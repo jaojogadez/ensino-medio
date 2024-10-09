@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Input</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="itemsContainer"></div>
+        <input type="button" value="Adicionar" onclick="addInput()">
+    </div>
+    <script>
+        let contInput = 0
+        let contID = 0 
+        function addInput(){
+            contInput++
+            contID++
+            // seleciona o container onde está os inputs
+            const card = document.querySelector('.itemsContainer')
+            // cria a div que estiliza o input
+            const newItem = document.createElement("div");
+            newItem.classList.toggle('item')
+
+            // cria um novo input
+            const newInput = document.createElement("input")
+            newInput.type = "checkbox"
+            newInput.id = `task${contID}`
+            newItem.append(newInput)
+
+            // cria um novo label
+            const newLabel = document.createElement("label")
+            newLabel.textContent = `Tarefa ${contInput}`
+            newLabel.setAttribute('for', `task${contID}` )
+            newItem.append(newLabel)
+
+            card.append(newItem)
+        }
+    </script>
+</body>
+</html>

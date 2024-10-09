@@ -1,0 +1,28 @@
+.container{
+    transition: .3s;
+}
+.container:hover{
+    transform: scale(0.9);
+    cursor: pointer;
+
+}
+
+.bi-xbox{
+    font-size: 150px;
+    color: green;
+}
+.bi-playstation{
+    font-size: 150px;
+    color: blue;
+}
+.bi-nintendo-switch{
+    font-size: 150px;
+    color: red;
+}
+.btn{
+    width: 150px;
+}
+
+.row{
+    max-width: 500px !important;
+}

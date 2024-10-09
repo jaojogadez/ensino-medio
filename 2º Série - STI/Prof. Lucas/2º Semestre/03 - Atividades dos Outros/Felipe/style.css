@@ -1,0 +1,7 @@
+.container, .row, .col  {
+    border: 1px solid black;
+}
+
+#fotos .col{
+    height: 100px;
+}

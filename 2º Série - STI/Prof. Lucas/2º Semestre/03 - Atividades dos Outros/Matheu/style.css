@@ -1,0 +1,29 @@
+.bi-heart-arrow, .bi-arrow-through-heart, .bi-arrow-through-heart-fill{
+    font-size: 100px;
+}
+.bi-heart-arrow{
+    cursor: pointer;
+    transition: .3s ease;
+    transition: .5s ease;
+    z-index: 1;
+}
+.bi-heart-arrow:hover{
+    transform: scale(1.1);
+}
+.bi-arrow-through-heart-fill{
+    display: none;
+    transition: .3s ease;
+    color: red;
+}
+
+.animation{
+    transform: translateX(300px) !important;
+}
+
+.d-none{
+    display: none !important;
+}
+.d-block{
+    display: block !important;
+    transform: scale(1.1) !important;
+}
