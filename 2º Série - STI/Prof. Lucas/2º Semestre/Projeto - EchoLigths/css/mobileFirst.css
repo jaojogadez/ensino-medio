@@ -60,40 +60,4 @@ nav{
     transition: .6s;
 }
 
-#homeContent{
-    animation: appear .555s;
-}
-
-#natal-tree{
-    animation: translateLeft .8s;
-}
-/* Responsividade para telas maiores */
-@media (min-width: 992px){
-   #homeContent{
-       text-align: start !important;
-   }
-}
-
-
-@keyframes appear{
-    from{
-        opacity: 0.5;
-        transform: scale(0.5);
-    }
-    to{
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes translateLeft{
-    from{
-        opacity: 0.5;
-        transform: translateX(-100%);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
 
