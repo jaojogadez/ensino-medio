@@ -61,7 +61,8 @@ nav ul{
     top: 0;
     transform: translateY(-100%);
     transition: .25s; 
-    z-index: 999;
+    z-index: 2;
+    background: linear-gradient(0deg, black, #12130F);
 }
 
 .glow::before, .glow::after{
@@ -71,9 +72,9 @@ nav ul{
     top: -2px;
     background: linear-gradient(45deg , #e6fb04, #ff6600, #00ff66, #00ffff, #ff00ff, #ff0099, #6e0dd0, #ff3300, #099fff);
     background-size: 400%;
-    width: calc(100% + 5px);
-    height: calc(100% + 5px);
-    z-index: -1;
+    width: calc(100% + 3px);
+    height: calc(100% + 3px);
+    z-index: -99;
     animation: animate 20s linear infinite;
 }
 
