@@ -21,6 +21,8 @@
     /* Tipografia */
     --header-font: "Orbitron";
     --secondary-font: "Roboto", sans-serif;
+
+    /* RGB Glow */
 }
 
 
@@ -62,6 +64,23 @@ nav ul{
     z-index: 999;
 }
 
+.glow::before, .glow::after{
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg , #e6fb04, #ff6600, #00ff66, #00ffff, #ff00ff, #ff0099, #6e0dd0, #ff3300, #099fff);
+    background-size: 400%;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+}
+
+.glow::after{
+    filter: blur(20px);
+}
+
 .menu--show {
     transform: translateY(0%);
     transition: .6s;
@@ -72,5 +91,5 @@ nav ul{
 }
 
 .img-fluid{
-    filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.384));
 }
