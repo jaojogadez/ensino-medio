@@ -22,7 +22,7 @@
     --header-font: "Orbitron";
     --secondary-font: "Roboto", sans-serif;
 
-    /* RGB Glow */
+    --main-blue: #0d6efd;
 }
 
 
@@ -62,7 +62,7 @@ nav ul{
     transform: translateY(-100%);
     transition: .25s; 
     z-index: 2;
-    background: linear-gradient(0deg, black, #12130F);
+  
 }
 
 .glow::before, .glow::after{
@@ -90,6 +90,55 @@ nav ul{
 .navbar-toggler:focus{
     box-shadow: 0px 0px 7px var(--Azul-Neon);
 }
+
+.btn-primary{
+    position: relative;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.btn-primary::after{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    top:0;
+    left: 0;
+    border-radius: 25px;
+}
+
+.btn-primary::before{
+    content: "";
+    background: linear-gradient(45deg , #FF0000, #FF7300, #FFFB00, #48FF00, #00FFD5, #002BFF, #FF00C8, #FF0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: animate 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.btn-primary:hover::before{
+    opacity: 1;
+}
+
+.btn-primary:active::after{
+    background: transparent;
+}
+
+.btn:active{
+    color: #000;
+    font-weight: bold;
+}
+
 
 .img-fluid{
     filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.384));
