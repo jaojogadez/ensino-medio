@@ -41,6 +41,10 @@ body, main{
     min-height: 100vh;
 }
 
+i{
+    transition: .3s ease;
+}
+
 nav{
     font: normal normal 1em var(--header-font);
     letter-spacing: 2.5px;
@@ -143,4 +147,8 @@ nav ul{
 
 .img-fluid{
     filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.384));
+}
+
+#aboutContent a i:hover{
+    background-color: #12130F;
 }

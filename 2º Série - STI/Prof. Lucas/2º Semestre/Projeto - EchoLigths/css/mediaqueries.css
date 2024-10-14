@@ -12,6 +12,16 @@
     nav ul{
         margin: 0 2rem;
     }
+
+    #about .mb-4{
+        order:  0 !important;
+    }   
+
+    #aboutContent .lh-base span{
+        display: block !important;
+    }
+
+    
 }
 
 /* Ajustes telas médias */
@@ -21,8 +31,26 @@
         display: none;
     }
 
+    
     #aboutContent h2{
         display: block !important;
+    }
+
+    #about .mb-4{
+        order:  2 ;
+    }    
+    
+    #aboutContent p{
+        text-align: justify !important;
+    }
+
+    #aboutContent h2{
+        text-align: left !important;
+    }
+
+   
+    #aboutContent{
+        order: 1 !important;
     }
 }
 
