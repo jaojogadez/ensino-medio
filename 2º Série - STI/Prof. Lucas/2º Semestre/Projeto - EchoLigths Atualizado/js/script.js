@@ -55,3 +55,26 @@ window.addEventListener('scroll', function() {
   
   document.documentElement.style.setProperty('--scroll-thumb-color', color);
 });
+
+// Seleciona o elemento da árvore de natal e a seção "Sobre"
+const natalTree = document.getElementById('natal-tree');
+const aboutSection = document.getElementById('about');
+
+// Cria um observador para detectar quando a seção "Sobre" está visível
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            // Adiciona a classe para mover o natal-tree para fora da tela
+            natalTree.classList.add('animate-out-on-scroll');
+        } else {
+            // Remove a classe quando a seção "Sobre" não está visível (opcional)
+            natalTree.classList.remove('animate-out-on-scroll');
+        }
+    });
+}, {
+    threshold: 0.5 // Quando 50% da seção "Sobre" estiver visível, a animação será acionada
+});
+
+// Observa a seção "Sobre"
+observer.observe(aboutSection);
+
