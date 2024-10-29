@@ -45,6 +45,7 @@ body, html{
     scroll-behavior: smooth;
     font: normal normal 1em var(--secondary-font);
     color: var(--Branco-Neve);
+    overflow-x: hidden;
 }
 
 body, main{
