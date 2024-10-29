@@ -49,9 +49,17 @@
     }
 
    
-    #aboutContent{
+    #aboutContent, #passbybassContent .col-md-6 .mb-4{
         order: 1 !important;
     }
+
+    #passbybassContent .mb-4{
+        align-items: flex-start !important;
+    }
+
+
+    
+
 }
 
 

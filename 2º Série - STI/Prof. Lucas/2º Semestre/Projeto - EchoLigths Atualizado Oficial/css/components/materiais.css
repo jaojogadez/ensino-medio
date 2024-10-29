@@ -32,3 +32,27 @@ th, td  {
 #passbybass{
     margin-top: calc(13rem + 10vh) !important;
 }
+
+
+
+
+li i{
+    margin:0 1rem ;
+    color: skyblue;
+}
+
+.list-unstyled li {
+    position: relative;
+    padding: 0 25px;
+}
+
+.list-unstyled li::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    background-color: skyblue;
+    border-radius: 50%;
+}
