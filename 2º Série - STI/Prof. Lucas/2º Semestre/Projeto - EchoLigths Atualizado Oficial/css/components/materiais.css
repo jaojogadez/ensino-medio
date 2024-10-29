@@ -38,7 +38,7 @@ th, td  {
 
 li i{
     margin:0 1rem ;
-    color: skyblue;
+    color: skyblue !important;
 }
 
 .list-unstyled li {
