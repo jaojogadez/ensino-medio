@@ -37,8 +37,7 @@ nav ul{
     height: calc(100% + 3px);
     z-index: -99;
     animation: animate 20s linear infinite;
-} */
-
-/* .glow::after{
+} 
+ .glow::after{
     filter: blur(10px);
-} */
+}  */

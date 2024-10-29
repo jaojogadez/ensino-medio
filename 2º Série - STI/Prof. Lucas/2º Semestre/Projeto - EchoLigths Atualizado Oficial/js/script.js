@@ -40,3 +40,18 @@ document.addEventListener('DOMContentLoaded', function () {
           });
 });
       
+
+window.addEventListener('scroll', function() {
+  // Calcula a porcentagem da rolagem
+  let scrollPercentage = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+  
+  // Mapeia a porcentagem da rolagem para cores diferentes (RGB)
+  let red = Math.min(255, Math.floor(scrollPercentage * 255));
+  let green = Math.min(255, Math.floor((1 - scrollPercentage) * 255));
+  let blue = Math.floor(150 + scrollPercentage * 105); // Ajustando o azul para ficar dentro de uma faixa mais viva
+
+  // Atualiza a cor da scrollbar usando a cor gerada
+  let color = `rgb(${red}, ${green}, ${blue})`;
+  
+  document.documentElement.style.setProperty('--scroll-thumb-color', color);
+});
