@@ -77,6 +77,7 @@ li i{
     filter: none !important;
 }
 
-
-
+.focus-img{
+    filter: brightness(.5) !important;
+}
 

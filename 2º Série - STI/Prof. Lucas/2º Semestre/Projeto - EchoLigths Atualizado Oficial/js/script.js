@@ -46,3 +46,10 @@ window.addEventListener('scroll', function() {
   
   document.documentElement.style.setProperty('--scroll-thumb-color', color);
 });
+
+
+// Script para dar zoom nas imagens
+const images = document.querySelectorAll(".get-image")
+images.addEventListener('click', function(){
+  document.body.classList.add("focus-img")
+})
