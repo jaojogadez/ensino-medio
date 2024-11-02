@@ -89,20 +89,4 @@ li i{
     transform: translate(-50%, -50%);
 } */
 
-#function a{
-    color: var(--Branco-Neve);
-}
 
-.code-container {
-    position: relative;
-    background-color: var(--color-black) !important;
-    color: var(--Branco-Neve) !important;
-    border-radius: 10px;
-    padding: 1rem;
-    margin-top: 1rem;
-}
-.copy-btn {
-    position: absolute;
-    top: 35px;
-    right: 35px;
-}

@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="css/mediaqueries.css"> <!-- responsividade -->
     <link rel="stylesheet" href="css/components.css"> <!-- components -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css"> <!-- Animate On Scrol -->
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css" rel="stylesheet" /> Prism JS -->
   </head>
   <body class="bg-dark">
     <!-- Start Menu -->
@@ -398,158 +397,156 @@
       <!-- Pass by Pass End -->
 
       <!-- Function Start -->
-      <section class="main-section row align-items-center gx-5 my-5" id="function">
+      <section class="main-section row align-items-center justify-content-center gx-5 my-5" id="function">
         <h2 class="display-6 header mb-2 text-center" data-aos="fade-down" data-aos-delay="300">Como o projeto deve funcionar? :</h2>
-        <p class="text-center" data-aos="fade-down" data-aos-delay="400">Copie o código abaixo e cole no 
+        <p class="text-center mb-3" data-aos="fade-down" data-aos-delay="400">Copie o código abaixo e cole no 
           <a href="https://www.arduino.cc/en/software" target="_blank" class="fw-bold">Arduino IDE</a>. Não se esqueça de incluir a biblioteca <span class="fw-bold">Adafruit_NeoPixel.h</span>.
         </p>
-        <div class="container col-md-9 code-container shadow">
-          <button class="btn btn-outline-secondary btn-sm copy-btn" onclick="copyCode()">Copiar</button>
-          <pre>
-            <code id="code" class="language-javascript">
-              /*******************************************************************************
-              * Controlando a Fita de LED RGB Enderecavel com a BlackBoard UNO (v1.0)
-              * 
-              * Codigo de exibicao basico da fita de LEDs RGB Enderecavel WS2812B controlada
-              * pela BlackBoard UNO. O codigo ira realizar um aparecimento gradual das tres 
-              * cores R, G e B, e entao ficar variando a cor dos LEDs aleatoreamente.
-              * 
-              * Copyright 2023 RoboCore.
-              * Escrito por Giovanni de Castro (12/08/2022).
-              * 
-              * This program is free software: you can redistribute it and/or modify
-              * it under the terms of the GNU General Public License as published by
-              * the Free Software Foundation, either version 3 of the License, or
-              * (at your option) any later version (&lt;https://www.gnu.org/licenses/&gt;).
-              *******************************************************************************/
-              
-              // Adicao da biblioteca de controle da fita de LED
-              #include &lt;Adafruit_NeoPixel.h&gt;
-              
-              // Variavel que armazena o numero de LEDs que serao controlados
-              const int NUMERO_LEDS = 60; // Padrao para 1 metro
-              // Caso queira controlar mais do que 1 metro, altere o valor acima com o numero de LEDs correspondente a metragem
-              
-              // Variavel que armazena o pino de controle da fita de LEDs
-              const int PINO_FITA_LEDS = 2;
-              
-              // Objeto de controle da fita de LEDs
-              Adafruit_NeoPixel fita_LED(NUMERO_LEDS, PINO_FITA_LEDS);
-              
-              int led = 8;//Atribui o pino 8 a variável led
-              int ky = A0;//Atribui o pino 9 - conectado ao sensor, a variável ky
-              int valorky = 0;//Declara a variável valorky do tipo inteiro
-              bool statusLed = false;//Declara a variável statusLed do tipo booleano
-              
-              
-              void setup() {
-              
-                pinMode (led, OUTPUT);//Define led (porta digital 8) como saída
-                pinMode (ky, INPUT);//Define ky (porta analógico 9) como saída
-                Serial.begin(9600);//Inicialização da comunicação serial, com velocidade de comunicação de 9600
-              
-                fita_LED.begin(); // Inicializacao da fita de LEDs
-              
-                // Inicia com os LEDs da fita apagados
-                fita_LED.clear();
-                fita_LED.show();
-                delay(100);
-              
-                // Realiza um aparecimento gradual acendendo da cor vermelha em todos os LEDs
-                for (int i = 0; i &lt; 256; i ++) { // Varia a cor do seu minimo (0) ate o seu maximo (255)
-                  for (int j = 0; j &lt; NUMERO_LEDS; j++) {
-                    fita_LED.setPixelColor(j, i, 0, 0); // Atualiza a cor de todos os LEDs da fita com o ultimo valor
+        <div class="col-md-9 code-window">
+          <div class="window-header card-header d-flex justify-content-between align-items-center p-3">
+              <div class="window-buttons">
+                  <span class="red rounded-circle"></span>
+                  <span class="yellow rounded-circle"></span>
+                  <span class="green rounded-circle"></span>
+              </div>
+          </div>
+          <div class="card-body position-relative shadow">
+              <button class="btn btn-outline-secondary btn-sm copy-btn" onclick="copyCode()">Copiar</button>
+              <pre id="code" class="code-block">
+                /*******************************************************************************
+                * Controlando a Fita de LED RGB Enderecavel com a BlackBoard UNO (v1.0)
+                * 
+                * Copyright 2023 RoboCore.
+                * Escrito por Giovanni de Castro (12/08/2022).
+                * 
+                * This program is free software: you can redistribute it and/or modify
+                * it under the terms of the GNU General Public License as published by
+                * the Free Software Foundation, either version 3 of the License, or
+                * (at your option) any later version (&lt;https://www.gnu.org/licenses/&gt;).
+                *******************************************************************************/
+
+                // Adicao da biblioteca de controle da fita de LED
+                #include &lt;Adafruit_NeoPixel.h&gt;
+
+                // Variavel que armazena o numero de LEDs que serao controlados
+                const int NUMERO_LEDS = 60; // Padrao para 1 metro
+                // Caso queira controlar mais do que 1 metro, altere o valor acima com o numero de LEDs correspondente a metragem
+
+                // Variavel que armazena o pino de controle da fita de LEDs
+                const int PINO_FITA_LEDS = 2;
+
+                // Objeto de controle da fita de LEDs
+                Adafruit_NeoPixel fita_LED(NUMERO_LEDS, PINO_FITA_LEDS);
+
+                int led = 8;//Atribui o pino 8 a variável led
+                int ky = A0;//Atribui o pino 9 - conectado ao sensor, a variável ky
+                int valorky = 0;//Declara a variável valorky do tipo inteiro
+                bool statusLed = false;//Declara a variável statusLed do tipo booleano
+
+
+                void setup() {
+
+                  pinMode (led, OUTPUT);//Define led (porta digital 8) como saída
+                  pinMode (ky, INPUT);//Define ky (porta analógico 9) como saída
+                  Serial.begin(9600);//Inicialização da comunicação serial, com velocidade de comunicação de 9600
+
+                  fita_LED.begin(); // Inicializacao da fita de LEDs
+
+                  // Inicia com os LEDs da fita apagados
+                  fita_LED.clear();
+                  fita_LED.show();
+                  delay(100);
+
+                  // Realiza um aparecimento gradual acendendo da cor vermelha em todos os LEDs
+                  for (int i = 0; i &lt; 256; i ++) { // Varia a cor do seu minimo (0) ate o seu maximo (255)
+                    for (int j = 0; j &lt; NUMERO_LEDS; j++) {
+                      fita_LED.setPixelColor(j, i, 0, 0); // Atualiza a cor de todos os LEDs da fita com o ultimo valor
+                    }
+                    fita_LED.show(); // Exibe o ultimo controle salvo nos LEDs
+                    delay(5);
                   }
-                  fita_LED.show(); // Exibe o ultimo controle salvo nos LEDs
-                  delay(5);
-                }
-              
-                delay(100); // Aguarda 500 ms para nova cor
-              
-                // Apaga os LEDs para nova cor
-                fita_LED.clear();
-                fita_LED.show();
-              
-                // Realiza um aparecimento gradual acendendo da cor verde em todos os LEDs
-                for (int i = 0; i &lt; 256; i ++) { // Varia a cor do seu minimo (0) ate o seu maximo (255)
-                  for (int j = 0; j &lt; NUMERO_LEDS; j++) {
-                    fita_LED.setPixelColor(j, 0, i, 0); // Atualiza a cor de todos os LEDs da fita com o ultimo valor
+
+                  delay(100); // Aguarda 500 ms para nova cor
+
+                  // Apaga os LEDs para nova cor
+                  fita_LED.clear();
+                  fita_LED.show();
+
+                  // Realiza um aparecimento gradual acendendo da cor verde em todos os LEDs
+                  for (int i = 0; i &lt; 256; i ++) { // Varia a cor do seu minimo (0) ate o seu maximo (255)
+                    for (int j = 0; j &lt; NUMERO_LEDS; j++) {
+                      fita_LED.setPixelColor(j, 0, i, 0); // Atualiza a cor de todos os LEDs da fita com o ultimo valor
+                    }
+                    fita_LED.show(); // Exibe o ultimo controle salvo nos LEDs
+                    delay(5);
                   }
-                  fita_LED.show(); // Exibe o ultimo controle salvo nos LEDs
-                  delay(5);
-                }
-              
-                delay(100); // Aguarda 500 ms para nova cor
-              
-                // Apaga os LEDs para nova cor
-                fita_LED.clear();
-                fita_LED.show();
-              
-                // Realiza um aparecimento gradual acendendo da cor azul em todos os LEDs
-                for (int i = 0; i &lt; 256; i ++) { // Varia a cor do seu minimo (0) ate o seu maximo (255)
-                  for (int j = 0; j &lt; NUMERO_LEDS; j++) {
-                    fita_LED.setPixelColor(j, 0, 0, i); // Atualiza a cor de todos os LEDs da fita com o ultimo valor
+
+                  delay(100); // Aguarda 500 ms para nova cor
+
+                  // Apaga os LEDs para nova cor
+                  fita_LED.clear();
+                  fita_LED.show();
+
+                  // Realiza um aparecimento gradual acendendo da cor azul em todos os LEDs
+                  for (int i = 0; i &lt; 256; i ++) { // Varia a cor do seu minimo (0) ate o seu maximo (255)
+                    for (int j = 0; j &lt; NUMERO_LEDS; j++) {
+                      fita_LED.setPixelColor(j, 0, 0, i); // Atualiza a cor de todos os LEDs da fita com o ultimo valor
+                    }
+                    fita_LED.show(); // Exibe o ultimo controle salvo nos LEDs
+                    delay(5);
                   }
-                  fita_LED.show(); // Exibe o ultimo controle salvo nos LEDs
-                  delay(5);
+                  delay(100); // Aguarda 500 ms para nova cor
+
+                  // Apaga os LEDs para nova cor
+                  fita_LED.clear();
+                  fita_LED.show();
+
                 }
-                delay(100); // Aguarda 500 ms para nova cor
-              
-                // Apaga os LEDs para nova cor
-                fita_LED.clear();
-                fita_LED.show();
-              
-              }
-              
-              void loop() {
-                valorky = analogRead(ky);//Lê o valor do sensor e armazena na variável valorky
-                Serial.print("\nSaida A0: "); // Imprime no serial monitor "\nSaida A0: "
-                Serial.print(valorky); // Imprime no serial monitor o valor que a variável valor_A0 recebeu
-                delay(20);//Intervalo de 20 milissegundos
-              
-              
-                  if (valorky &gt; 100 &amp;&amp; statusLed == false) { //Se valorky for igual a 1 (HIGH) e statusLed for igual a false:
-                      delay(100);
-                      // Gera valores RGB aleatorios
-                      randomSeed(analogRead(A0));
-                      int vermelho = random(0, 255);
-                      int verde = random(0, 255);
-                      int azul = random(0, 255);
-                    
-                      // Acende os LEDs com os valores RGB gerados
-                      for (int l = 0; l &lt; NUMERO_LEDS; l++) {
-                        fita_LED.setPixelColor(l, vermelho, verde, azul); // Atualiza a cor dos LEDs com os valores coletados
-                      }
-                      fita_LED.show(); // Exibe o ultimo controle salvo nos LEDs
-                      delay(500); // Espera para nova cor
-                        statusLed = true;//Coloca statusLed como true
-                      }
+
+                void loop() {
+                  valorky = analogRead(ky);//Lê o valor do sensor e armazena na variável valorky
+                  Serial.print("\nSaida A0: "); // Imprime no serial monitor "\nSaida A0: "
+                  Serial.print(valorky); // Imprime no serial monitor o valor que a variável valor_A0 recebeu
+                  delay(20);//Intervalo de 20 milissegundos
+
+
+                    if (valorky &gt; 100 &amp;&amp; statusLed == false) { //Se valorky for igual a 1 (HIGH) e statusLed for igual a false:
+                        delay(100);
+                        // Gera valores RGB aleatorios
+                        randomSeed(analogRead(A0));
+                        int vermelho = random(0, 255);
+                        int verde = random(0, 255);
+                        int azul = random(0, 255);
                       
-                  else {//Senão:
-                    
-                      delay(100);
-                      for (int l = 0; l &lt; NUMERO_LEDS; l++) {
-                        fita_LED.setPixelColor(0, 0, 0, 0); // Atualiza a cor dos LEDs com os valores coletados
-                      }
-                      fita_LED.show(); // Exibe o ultimo controle salvo nos LEDs
-                      delay(500); // Espera para nova cor
-                        statusLed = false;//Coloca statusLed como true
-                      }
-                    
-                   
-                
-              }
-              
-              
-            </code>
-          </pre>
+                        // Acende os LEDs com os valores RGB gerados
+                        for (int l = 0; l &lt; NUMERO_LEDS; l++) {
+                          fita_LED.setPixelColor(l, vermelho, verde, azul); // Atualiza a cor dos LEDs com os valores coletados
+                        }
+                        fita_LED.show(); // Exibe o ultimo controle salvo nos LEDs
+                        delay(500); // Espera para nova cor
+                          statusLed = true;//Coloca statusLed como true
+                        }
+                        
+                    else {//Senão:
+                      
+                        delay(100);
+                        for (int l = 0; l &lt; NUMERO_LEDS; l++) {
+                          fita_LED.setPixelColor(0, 0, 0, 0); // Atualiza a cor dos LEDs com os valores coletados
+                        }
+                        fita_LED.show(); // Exibe o ultimo controle salvo nos LEDs
+                        delay(500); // Espera para nova cor
+                          statusLed = false;//Coloca statusLed como true
+                        }        
+                }
+              </pre>
+              <button class="copy-button btn btn-primary border-0" onclick="copyCode()">Copiar Código</button>
+          </div>
         </div>
       </section>
       <!-- Function End -->
 
     </main>
     <!-- Main Content End -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
