@@ -73,6 +73,10 @@ li i{
     color: skyblue !important;
 }
 
+.glow-none{
+    filter: none !important;
+}
+
 
 
 

@@ -67,15 +67,14 @@
 /* Ajustes telas mais pequenas */
 
 @media (max-width: 768px){
-    .passbybassContent .mb-4 p{
-        align-items: flex-start !important;
-        text-align: center !important;
+    #passbybass{
+        text-align: center;
     }
 
-    #ul{
-        text-align: left;
-        margin: 0 auto !important;
-        max-width: 80%;
+    #passbybass ul{
+        text-align: initial;
+        margin: 0 auto;
+        transform: translateX(calc(25% - 10vw))
     }
 }
  

@@ -10,30 +10,28 @@ window.addEventListener('scroll', function(){
 });
 
 // Script for actives links
-document.addEventListener('DOMContentLoaded', function () {
-  const sections = document.querySelectorAll('.main-section'); // Observe apenas seções principais
-  const navLinks = document.querySelectorAll('.nav-link');
-  const observerOptions = {
-    root: null,
-    threshold: 0.5,
-  };
-  const observer = new IntersectionObserver(function (entries) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const sectionId = entry.target.id;
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            link.classList.add('active');
-          }
-        });
-      }
-    });
-  }, observerOptions);
+const sections = document.querySelectorAll('.main-section');
+const navLinks = document.querySelectorAll('nav a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+
   sections.forEach(section => {
-    observer.observe(section);
+    const sectionTop = section.getBoundingClientRect().top;
+    const sectionBottom = section.getBoundingClientRect().bottom;
+    if (sectionTop <= 150 && sectionBottom > 150) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href').includes(current)) {
+      link.classList.add('active');
+    }
   });
 });
+
 
       
 // Script for scrollbar colors
