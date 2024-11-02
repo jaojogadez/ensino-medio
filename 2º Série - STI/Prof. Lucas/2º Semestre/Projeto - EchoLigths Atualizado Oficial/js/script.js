@@ -48,8 +48,15 @@ window.addEventListener('scroll', function() {
 });
 
 
-// Script para dar zoom nas imagens
-const images = document.querySelectorAll(".get-image")
-images.addEventListener('click', function(){
-  document.body.classList.add("focus-img")
-})
+// // Script para dar zoom nas imagens
+// const images = document.querySelectorAll(".get-image")
+// images.forEach(image => {
+//   image.onclick = () => {
+//     document.body.classList.toggle("focus-img")
+
+//     const zoomContainer = document.createElement("div")
+//     zoomContainer.classList.add("col-md-6", "newZoomClass", "rounded-3", "border")
+//           document.body.appendChild(zoomContainer)
+
+//   }
+// })

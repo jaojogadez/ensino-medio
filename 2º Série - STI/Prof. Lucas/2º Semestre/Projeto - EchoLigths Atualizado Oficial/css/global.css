@@ -76,8 +76,15 @@ li i{
 .glow-none{
     filter: none !important;
 }
-
+/* 
 .focus-img{
     filter: brightness(.5) !important;
+    filter: blur(10px) !important;
 }
 
+.newZoomClass{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */

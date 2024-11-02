@@ -1,28 +1,48 @@
 /* Configurações das animações */
+.txt-animado span{
+    position: relative;
+}
 
+.txt-animado span::before{
+    content: "";
+    animation: palavras 30s infinite ;
+}
 
-@keyframes appear{
-    from{
-        opacity: 0.5;
-        transform: scale(0.5);
+.txt-animado span::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid skyblue;
+    right: -10px;
+    animation: cursor .8s infinite, digita 30s steps(15) infinite;
+    width: calc(100% + 17px);
+    background-color: #212529;
+}
+
+@keyframes digita {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
     }
-    to{
-        opacity: 1;
-        transform: scale(1);
+    5%, 20%, 25%, 40%, 45%, 60%, 80%, 85%{
+        width: calc(100% + 17px);
     }
 }
 
-@keyframes translateLeft{
-    from{
-        opacity: 0.5;
-        transform: translateX(-100%);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0%);
+
+@keyframes cursor {
+    0%{
+        border-left: 2px solid #212529;
     }
 }
 
+@keyframes palavras {
+    0%, 50% {
+        content: "Seja Bem Vindo!";
+    }
+    51%, 100% {
+        content: "Seja Bem Vinda!";
+    }
+}
 
 /* RBG ANIMATE 1 */
 
