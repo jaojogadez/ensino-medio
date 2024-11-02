@@ -67,7 +67,7 @@
 /* Ajustes telas mais pequenas */
 
 @media (max-width: 768px){
-    .passbybassContent .mb-4{
+    .passbybassContent .mb-4 p{
         align-items: flex-start !important;
         text-align: center !important;
     }
