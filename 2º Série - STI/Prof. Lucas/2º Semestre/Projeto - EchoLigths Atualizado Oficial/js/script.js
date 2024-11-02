@@ -47,10 +47,21 @@ window.addEventListener('scroll', function() {
   document.documentElement.style.setProperty('--scroll-thumb-color', color);
 });
 
+// Script for copy the code
+function copyCode() {
+  const codeText = document.getElementById("code").innerText;
+  navigator.clipboard.writeText(codeText).then(() => {
+      alert("Código copiado com sucesso!");
+  }).catch(() => {
+      alert("Erro ao copiar o código.");
+  });
+}
+
 
 // // Script para dar zoom nas imagens
 // const images = document.querySelectorAll(".get-image")
 // images.forEach(image => {
+
 //   image.onclick = () => {
 //     document.body.classList.toggle("focus-img")
 
