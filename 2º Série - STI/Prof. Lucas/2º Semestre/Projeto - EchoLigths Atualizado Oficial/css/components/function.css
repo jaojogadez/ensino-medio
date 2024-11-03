@@ -1,5 +1,5 @@
-#function a{
-    color: var(--Branco-Neve);
+#function a, #function p span{
+    color: skyblue;
 }
 
 .copy-btn {
@@ -49,4 +49,8 @@
 
 .copy-button {
     width: 100%; /* Faz o botão ocupar toda a largura */
+}
+
+#function .text-justify{
+    text-align: justify;
 }

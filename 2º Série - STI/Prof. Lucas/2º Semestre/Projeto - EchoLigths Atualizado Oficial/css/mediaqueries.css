@@ -67,7 +67,7 @@
 /* Ajustes telas mais pequenas */
 
 @media (max-width: 768px){
-    #passbybass{
+    #passbybass, #function{
         text-align: center;
     }
 
@@ -75,6 +75,10 @@
         text-align: initial;
         margin: 0 auto;
         transform: translateX(calc(25% - 10vw))
+    }
+
+    .code-block, #code{
+        text-align: initial !important;
     }
 }
  
