@@ -58,6 +58,26 @@ function copyCode() {
 }
 
 
+// Script for typing effect
+document.addEventListener("DOMContentLoaded", function () {
+  const codeContainer = document.getElementById("code");
+  const codeText = codeContainer.textContent;
+  codeContainer.textContent = ""; // Limpa o conteúdo inicial para animação
+  codeContainer.style.display = "block"; // Exibe o bloco de código
+
+  let index = 0;
+
+  function typeEffect() {
+      if (index < codeText.length) {
+          codeContainer.textContent += codeText[index];
+          index++;
+          setTimeout(typeEffect, 0.001); // Tempo reduzido para uma animação mais rápida
+      }
+  }
+
+  typeEffect();
+});
+
 // // Script para dar zoom nas imagens
 // const images = document.querySelectorAll(".get-image")
 // images.forEach(image => {

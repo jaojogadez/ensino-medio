@@ -412,7 +412,7 @@
           </div>
           <div class="card-body position-relative shadow">
               <button class="btn btn-outline-secondary btn-sm copy-btn" onclick="copyCode()">Copiar</button>
-              <pre id="code" class="code-block">
+              <pre class="code-block">
                 /*******************************************************************************
                 * Controlando a Fita de LED RGB Enderecavel com a BlackBoard UNO (v1.0)
                 * 
@@ -503,41 +503,41 @@
 
                 }
 
-                void loop() {
-                  valorky = analogRead(ky);//Lê o valor do sensor e armazena na variável valorky
-                  Serial.print("\nSaida A0: "); // Imprime no serial monitor "\nSaida A0: "
-                  Serial.print(valorky); // Imprime no serial monitor o valor que a variável valor_A0 recebeu
-                  delay(20);//Intervalo de 20 milissegundos
-
-
-                    if (valorky &gt; 100 &amp;&amp; statusLed == false) { //Se valorky for igual a 1 (HIGH) e statusLed for igual a false:
-                        delay(100);
-                        // Gera valores RGB aleatorios
-                        randomSeed(analogRead(A0));
-                        int vermelho = random(0, 255);
-                        int verde = random(0, 255);
-                        int azul = random(0, 255);
-                      
-                        // Acende os LEDs com os valores RGB gerados
-                        for (int l = 0; l &lt; NUMERO_LEDS; l++) {
-                          fita_LED.setPixelColor(l, vermelho, verde, azul); // Atualiza a cor dos LEDs com os valores coletados
-                        }
-                        fita_LED.show(); // Exibe o ultimo controle salvo nos LEDs
-                        delay(500); // Espera para nova cor
-                          statusLed = true;//Coloca statusLed como true
-                        }
-                        
-                    else {//Senão:
-                      
-                        delay(100);
-                        for (int l = 0; l &lt; NUMERO_LEDS; l++) {
-                          fita_LED.setPixelColor(0, 0, 0, 0); // Atualiza a cor dos LEDs com os valores coletados
-                        }
-                        fita_LED.show(); // Exibe o ultimo controle salvo nos LEDs
-                        delay(500); // Espera para nova cor
-                          statusLed = false;//Coloca statusLed como true
-                        }        
-                }
+                <span id="code" style="display: none;">
+                  void loop() {
+                    valorky = analogRead(ky);//Lê o valor do sensor e armazena na variável valorky
+                    Serial.print("\nSaida A0: "); // Imprime no serial monitor "\nSaida A0: "
+                    Serial.print(valorky); // Imprime no serial monitor o valor que a variável valor_A0 recebeu
+                    delay(20);//Intervalo de 20 milissegundos
+                      if (valorky &gt; 100 &amp;&amp; statusLed == false) { //Se valorky for igual a 1 (HIGH) e statusLed for igual a false:
+                          delay(100);
+                          // Gera valores RGB aleatorios
+                          randomSeed(analogRead(A0));
+                          int vermelho = random(0, 255);
+                          int verde = random(0, 255);
+                          int azul = random(0, 255);
+                  
+                          // Acende os LEDs com os valores RGB gerados
+                          for (int l = 0; l &lt; NUMERO_LEDS; l++) {
+                            fita_LED.setPixelColor(l, vermelho, verde, azul); // Atualiza a cor dos LEDs com os valores coletados
+                          }
+                          fita_LED.show(); // Exibe o ultimo controle salvo nos LEDs
+                          delay(500); // Espera para nova cor
+                            statusLed = true;//Coloca statusLed como true
+                          }
+                  
+                      else {//Senão:
+                  
+                          delay(100);
+                          for (int l = 0; l &lt; NUMERO_LEDS; l++) {
+                            fita_LED.setPixelColor(0, 0, 0, 0); // Atualiza a cor dos LEDs com os valores coletados
+                          }
+                          fita_LED.show(); // Exibe o ultimo controle salvo nos LEDs
+                          delay(500); // Espera para nova cor
+                            statusLed = false;//Coloca statusLed como true
+                          }
+                  }
+                </span>
               </pre>
               <button class="copy-button btn btn-primary border-0" onclick="copyCode()">Copiar Código</button>
           </div>
