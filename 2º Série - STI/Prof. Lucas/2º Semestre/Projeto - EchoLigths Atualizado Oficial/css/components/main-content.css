@@ -21,6 +21,7 @@
     border-radius: 25px;
 }
 
+
 .btn-primary::before{
     content: "";
     background: linear-gradient(45deg , #FF0000, #FF7300, #FFFB00, #48FF00, #00FFD5, #002BFF, #FF00C8, #FF0000);
@@ -47,7 +48,7 @@
 }
 
 .btn:active{
-    color: #000;
+    color: #000 !important;
     font-weight: bold;
 }
 

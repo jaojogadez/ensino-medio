@@ -91,3 +91,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //   }
 // })
+
+
+// Simular Palmas
+
+const statusSpan = document.getElementById("status-lights")
+const btnSimulate = document.getElementById("simulateButton")
+const echolightsDesconnect = document.getElementById("echolightDesconnect")
+const echolightsConnect = document.getElementById("echolightConnect")
+let contPalma = 0
+btnSimulate.onclick = () => {
+  contPalma++
+  if(contPalma % 2 !== 0){
+    statusSpan.textContent = "Ligado"
+    echolightsDesconnect.style.display = "none"
+    echolightsConnect.style.display = "block"
+    
+  }
+  else{
+    statusSpan.textContent = "Desligado"
+    echolightsDesconnect.style.display = "block"
+    echolightsConnect.style.display = "none"
+  }
+}

@@ -47,10 +47,20 @@
     background: var(--color-black); /* Cor de fundo leve */
 }
 
-.copy-button {
-    width: 100%; /* Faz o botão ocupar toda a largura */
-}
+
 
 #function .text-justify{
     text-align: justify;
+}
+
+.connectEcho{
+    content: "Ligado" !important;
+}
+
+#echolightConnect{
+    display: none;
+}
+
+#function .img-fluid {
+    filter: none;
 }

@@ -410,7 +410,7 @@
                   <span class="green rounded-circle"></span>
               </div>
           </div>
-          <div class="card-body position-relative shadow">
+          <div class="card-body position-relative ">
               <button class="btn btn-outline-secondary btn-sm copy-btn" onclick="copyCode()">Copiar</button>
               <pre class="code-block">
                 /*******************************************************************************
@@ -539,7 +539,7 @@
                   }
                 </span>
               </pre>
-              <button class="copy-button btn btn-primary border-0" onclick="copyCode()">Copiar Código</button>
+              <button class="btn btn-primary rounded-pill mt-4 px-4 border-0 w-100" onclick="copyCode()">Copiar Código</button>
           </div>
         </div>
         <div class="row col-md-9 align-items-center gx-5 my-5">
@@ -548,15 +548,49 @@
             Em resumo, com o código rodando, o sensor KY-038 será capaz de "ouvir" o som de uma palma. Quando o volume captado pelo sensor ultrapassar o valor de 100, ele enviará um sinal para acender a fita LED. Ao receber outro sinal com o mesmo nível de intensidade, os LEDs serão apagados.
           </p>
         </div>
-        <div class="row align-items-center gx-5 my-5">
+        <div class="row align-items-center gx-5 mb-5">
           <div class="col-md-6 order-2">
-            <h3 class="display-6 header mb-3 " data-aos="fade-down" data-aos-delay="300">Como o projeto deve funcionar:</h3>
+            <h3 class="display-6 header mb-3 " data-aos="fade-left" data-aos-delay="300">Como o projeto deve funcionar:</h3>
+            <div class="container my-5 p-0  gap-4">
+                <div class="d-flex align-items-center justify-content-center gap-2 flex-wrap">
+                  <h4 class="display-6 header m-0 mx-4" data-aos="fade-down" data-aos-delay="300">Status:</h4>
+                  <span id="status-lights" class="h4 display-6 header m-0 connectEcho" style="color: skyblue;" data-aos="fade-down" data-aos-delay="400">Desligado</span>
+                </div>
+                <button type="submit" value="Simular Palma" class="btn btn-primary rounded-pill mt-4 px-4 border-0 w-100" data-aos="fade-left" data-aos-delay="300" id="simulateButton">
+                  Simular Palma
+                </button>
+            </div>
           </div>
-          <div class="col-md-6 order-1"></div>
+          <div class="col-md-6 order-1">
+            <div class="text-center" id="echolightDesconnect">
+              <img
+                src="assets/IMG_1885-removebg-preview.png"
+                alt="Foto do Echo Lights."
+                class="img-fluid text-center rounded-3"
+                data-aos="fade-right"
+                data-aos-delay="300"
+                >
+                <figcaption>Echo Lights Desligado</figcaption>
+            </div>
+            <div class="text-center" id="echolightConnect">
+              <img src="assets/IMG_1893-removebg-preview.png"
+                alt="Foto do Echo Lights."
+                class="img-fluid text-center rounded-3"
+                data-aos="fade-right"
+                data-aos-delay="300"
+                >
+              <figcaption>Echo Lights Ligado</figcaption>
+            </div>
+          </div>
         </div>
       </section>
       <!-- Function End -->
 
+      <!-- Footer Start -->
+      <footer class="row align-items-center gx-5 my-5">
+
+      </footer>
+      <!-- Footer End -->
     </main>
     <!-- Main Content End -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
