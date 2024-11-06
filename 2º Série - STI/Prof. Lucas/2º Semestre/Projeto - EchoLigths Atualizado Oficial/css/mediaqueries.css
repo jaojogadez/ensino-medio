@@ -27,12 +27,12 @@
 /* Ajustes telas médias */
 
 @media (min-width: 768px){
-    #about .mb-4 h2{
+    #about .mb-4 h2, #functionContent .order-1 h3{
         display: none;
     }
 
     
-    #aboutContent h2{
+    #aboutContent h2, #functionContent .order-2 h3{
         display: block !important;
     }
 
@@ -67,7 +67,7 @@
 /* Ajustes telas mais pequenas */
 
 @media (max-width: 768px){
-    #passbybass, #function{
+    #passbybass, #function, #market{
         text-align: center;
     }
 

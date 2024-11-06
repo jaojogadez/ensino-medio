@@ -397,7 +397,7 @@
       <!-- Pass by Pass End -->
 
       <!-- Function Start -->
-      <section class="main-section row align-items-center justify-content-center gx-5 my-5" id="function">
+      <section class="main-section row align-items-center justify-content-center gx-5 mb-5" id="function">
         <h2 class="display-6 header mb-2 text-center" data-aos="fade-down" data-aos-delay="300">Funcionamento:</h2>
         <p class="text-center mb-3" data-aos="fade-down" data-aos-delay="400">Copie o código abaixo e cole no 
           <a href="https://www.arduino.cc/en/software" target="_blank" class="fw-bold">Arduino IDE</a>. Não se esqueça de incluir a biblioteca <span class="fw-bold">Adafruit_NeoPixel.h</span>.
@@ -548,9 +548,9 @@
             Em resumo, com o código rodando, o sensor KY-038 será capaz de "ouvir" o som de uma palma. Quando o volume captado pelo sensor ultrapassar o valor de 100, ele enviará um sinal para acender a fita LED. Ao receber outro sinal com o mesmo nível de intensidade, os LEDs serão apagados.
           </p>
         </div>
-        <div class="row align-items-center gx-5 mb-5">
+        <div class="row align-items-center gx-5 mb-5" id="functionContent">
           <div class="col-md-6 order-2">
-            <h3 class="display-6 header mb-3 " data-aos="fade-left" data-aos-delay="300">Como o projeto deve funcionar:</h3>
+            <h3 class="display-6 header mb-3 d-none" data-aos="fade-left" data-aos-delay="300">Como o projeto deve funcionar:</h3>
             <div class="container my-5 p-0  gap-4">
                 <div class="d-flex align-items-center justify-content-center gap-2 flex-wrap">
                   <h4 class="display-6 header m-0 mx-4" data-aos="fade-down" data-aos-delay="300">Status:</h4>
@@ -562,6 +562,7 @@
             </div>
           </div>
           <div class="col-md-6 order-1">
+            <h3 class="display-6 header mb-3 " data-aos="fade-left" data-aos-delay="300">Como o projeto deve funcionar:</h3>
             <div class="text-center" id="echolightDesconnect">
               <img
                 src="assets/IMG_1885-removebg-preview.png"
@@ -586,10 +587,44 @@
       </section>
       <!-- Function End -->
 
-      <!-- Footer Start -->
-      <footer class="row align-items-center gx-5 my-5">
+      <!-- Market -->
+      <div class="main-section row align-items-center gx-5 my-5 "  id="market">
+        <h2 class="display-4 header mb-2 text-center" data-aos="fade-up" data-aos-delay="300">Quero comprar o Echo Lights!</h2>
+        <div class="col-md-6 mb-4 text-center">
+          <img
+            src="assets/IMG_1885-removebg-preview.png"
+            alt="Foto do Echo Lights."
+            class="img-fluid text-center rounded-3"
+            data-aos="fade-right"
+            data-aos-delay="300"
+            >
+          
+        </div>
+        <div class="col-md-6 d-flex flex-column gap-4 order-2">
+          <h2 class="header display-6 mb-2" data-aos="fade-up" data-aos-delay="300">Não Perca Essa Chance</h2>
+          <p class="lh-base fs-5" data-aos="fade-up" data-aos-delay="400">
+            Adiquira agora o seu Echo Lights com uma oferta imperdível. Seja rápido - estoques limitados!
+          </p>
+          <a href="">
+            
+            <button
+              type="button"
+              id="buyEchoLights"
+              class="btn animated-button rounded-pill mt-1 px-4 border-0 mb-5"
+              data-aos="fade-up" data-aos-delay="650"
+              >
+                Comprar o Echo Lights  <i class="bi bi-arrow-right px-2"></i>
+            </button>
+          </a>
+        </div>
+      </div>
 
-      </footer>
+      
+
+      <!-- Footer Start -->
+      <!-- <footer class="row align-items-center gx-5 my-5">
+
+      </footer> -->
       <!-- Footer End -->
     </main>
     <!-- Main Content End -->

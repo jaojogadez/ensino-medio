@@ -64,3 +64,11 @@
 #function .img-fluid {
     filter: none;
 }
+
+#market{
+    margin-top: 7rem !important;
+}
+
+#market .btn:hover{
+    transform: scale(1.1);
+}
