@@ -1,0 +1,5 @@
+nome=input("Escreva seu nome:")
+nomes = nome.split()
+print(nomes)
+print(nomes[0])
+print(nomes[-1])

@@ -1,0 +1,5 @@
+frase = input("Escreva uma frase daora ")
+frase = frase.lower()
+print("Total de a:", frase.count('a'))
+print("Index do primeiro a:", frase.find('a'))
+print("Index do último a:" ,frase.rfind('a'))
